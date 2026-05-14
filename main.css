@@ -9,8 +9,10 @@
 
     --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
 
-    --ff-josefin: 'Josefin sans', sans-serif;
+    --ff-josefin: 'Merriweather', serif;
     --ff-turret: 'Turret road', sans-serif;
+
+       
 
     --fs-1: 25px;
     --fs-2: 18px;
