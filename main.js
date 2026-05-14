@@ -45,3 +45,6 @@ const goTopBtn = document.querySelector('[data-go-top]');
 window.addEventListener('scroll', function () {
     window.scrollY > 200 ? goTopBtn.classList.add('active') : goTopBtn.classList.remove('active');
 });
+
+
+
