@@ -25,9 +25,7 @@
     color-scheme: dark;
   }
   
-  body {
-    font-family: 'Merriweather', serif;
-    /*font-family: system-ui, sans-serif;*/
+  body {   
     min-height: 100vh;
     background-color: var(--bg-primary);
     color: var(--text-secondary);

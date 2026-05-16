@@ -9,9 +9,12 @@
 
     --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
 
-    --ff-josefin: 'Merriweather', serif;
-    --ff-turret: 'Turret road', sans-serif;
 
+
+    /*--ff-josefin: 'Merriweather', serif;
+    --f-josefin: 'Turret road', sans-serif;*/
+    --ff-josefin: 'Arimo', Arial, sans-serif;
+    --f-josefin: 'Turret road', sans-serif;
        
 
     --fs-1: 25px;
@@ -159,6 +162,14 @@ header {
     font-size: var(--fs-4);
     font-weight: var(--fw-700);
     margin-bottom: 25px;
+}
+.hero-initial {
+    font-size: var(--fs-3);
+    /*font-weight: var(--fw-700);*/
+    color: var(--flourescent-blue);
+    /*float: left;
+    line-height: 1;
+    margin-right: 5px;*/
 }
 
 .hero-banner { display: none; }
