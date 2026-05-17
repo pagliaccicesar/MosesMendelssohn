@@ -117,15 +117,15 @@ header {
             border-radius: 5px;
         }
 
-        .navbar.active { bottom: 0; visibility: visible; transition: .25s ease-out; }
+    .navbar.active { bottom: 0; visibility: visible; transition: .25s ease-out; }
     .navbar-list { padding-bottom: 5px; border-bottom: 1px solid hsla(0, 0%, 100%, .05); margin-bottom: 5px; }
     .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 10px; border-radius: 4px; }
-        .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
+    .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
     .navbar-actions { display: flex; justify-content: space-around; align-items: center; }
-    .navbar-btn a { color:var(--white); font-size: 25px; padding: 5px; border-radius: 4px; }
-        .navbar-btn:is(:hover, :focus), .navbar-actions .btn:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
+    .navbar-btn a { color:var(--white); font-size: 25px; padding: 5px; border-radius: 4px; }    
+    .navbar-btn:is(:hover, :focus), .navbar-actions .btn:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
     .overlay { position: fixed; inset: 0; pointer-events: none; z-index: 1; transition: var(--transition); }
-        .overlay.active { pointer-events: all; background: hsla(0, 0%, 0%, .7); }
+    .overlay.active { pointer-events: all; background: hsla(0, 0%, 0%, .7); }
 
 /*HERO*/
 
