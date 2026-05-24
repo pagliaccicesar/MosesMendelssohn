@@ -1,6 +1,7 @@
 :root {
     --flourescent-blue: #00f9ef;
     --heliotrope-gray: #aba6bd;
+    --background: #8d7be7;
     --russian-violet: #150849;
     --dark-violet: #0c003d;
     --space-cadet: #221d48;
@@ -241,13 +242,14 @@ header {
 
 .newsletter { padding: var(--section-padding) 0; }
 .newsletter-card { 
-    background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;
+    /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
+    background: url('./img/fondo_newsletter.png') no-repeat center / cover;
     padding: 60px 20px;
     border-radius: 12px;
 }
 
     .newsletter-card .card-title { font-size: var(--fs-1); line-height: 1.3; margin-bottom: 10px; }
-    .newsletter-card .card-text { font-size: var(--fs-4); line-height: 1.5; margin-bottom: 20px; }
+    .newsletter-card .card-text { font-size: var(--fs-4); line-height: 1.5; margin-bottom: 20px; color:white }
     .newsletter-card .input-field {
         padding: 18px 15px;
         border-radius: 4px;
@@ -453,5 +455,104 @@ header {
     .social-title { margin-left: auto; margin-bottom: 35px; }
     .social-link { width: 45px; height: 45px; font-size: 22px;}
 
+}
+
+/******* Agenda  ********/
+section.agenda { padding: var(--section-padding) 0; }
+.widget-title {
+  color: var(--flourescent-blue);
+  text-align: center;
+  font-size: var(--fs-1);
+  font-weight: 300;
+    margin-bottom: 30px;
+
+}
+.event-list {
+  /*font-family: 'Public Sans', sans-serif;*/
+  list-style: none;
+  margin: 0 0 1em;
+}
+.event {
+  background-color: var(--background);
+  margin-bottom: 1em;
+  min-height: 120px;
+}
+.event .date {
+  background-color: black;  
+  line-height: 1;
+  padding: 0 32px 1px;
+}
+@media (min-width: 40em) {
+  .event .date {
+    float: left;
+    height: 120px;
+    margin-right: -120px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+  }
+}
+.event .date a {
+  color: inherit;
+}
+.event .date span {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-right: 5px;
+}
+@media (min-width: 40em) {
+  .event .date span {
+    display: block;
+  }
+}
+@media (min-width: 40em) {
+  .event .date .day {
+    font-size: 3.6em;
+    font-weight: 80;
+  }
+}
+.event .date .month {
+  font-weight: 900;
+}
+@media (min-width: 40em) {
+  .event .date .month {
+    font-size: 2em;
+  }
+}
+.event .date .year,
+.event .date .time {
+  line-height: 1.1;
+}
+@media (min-width: 40em) {
+  .event .date .year,
+.event .date .time {
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+}
+.event .info {
+  color: #f5f5f5;
+  padding: 6px 12px;
+}
+@media (min-width: 40em) {
+  .event .info {
+    margin-left: 120px;
+  }
+}
+.event .info .title {
+  color: #f5f5f5;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+@media (min-width: 40em) {
+  .event .info .title {
+    font-size: 1.75em;
+  }
+}
+.event .info .desc {
+  color: #f5f5f5;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
