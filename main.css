@@ -20,7 +20,7 @@
     --fs-1: 25px;
     --fs-2: 18px;
     --fs-3: 17px;
-    --fs-4: 15px;
+    --fs-4: 10px;
     --fs-5: 12px;
 
     --fw-500: 500;
@@ -72,7 +72,7 @@ body { background-color: var(--dark-violet); color: var(--white); }
     .btn-primary > span { margin-top: 3px; }
 
 .container { padding: 0 15px; }
-.h3 { color: var(--white); font-size: var(--fs-2); line-height: 1.5; }
+.h3 { color: var(--white); font-size: var(--fs-4); line-height: 1.5; }
 
 /*HEADER*/
 
@@ -335,6 +335,7 @@ header {
         --fs-1: 30px;
         --fs-2: 20px;
         --fs-3: 18px;
+        --fs-4: 15px;        
     }
 
     .container { max-width: 600px; }
@@ -451,3 +452,4 @@ header {
     .social-link { width: 45px; height: 45px; font-size: 22px;}
 
 }
+
