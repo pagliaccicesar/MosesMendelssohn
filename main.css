@@ -30,6 +30,7 @@
     --transition: 0.25s ease-in-out;
 
     --section-padding: 35px;
+    --section-padding-newsletter: 95px;
 }
 
 
@@ -240,7 +241,7 @@ header {
 
 /*NEWSLETTER*/
 
-.newsletter { padding: var(--section-padding) 0; }
+.newsletter { padding: var(--section-padding-newsletter) 0; }
 .newsletter-card { 
     /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
     background: url('./img/fondo_newsletter.png') no-repeat center / cover;
