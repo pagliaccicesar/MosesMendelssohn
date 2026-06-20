@@ -1,4 +1,4 @@
-/*** css de equipo ***/
+
 :root {
     --clr-primary: teal;
     --clr-secondary: #8D7BE7;
@@ -38,7 +38,7 @@
   }
   
   section {
-    margin-top: 2rem;
+    margin-top: 6rem;
     padding-block: clamp(2rem, 5vw, 5rem);
   }
   
@@ -91,22 +91,45 @@
   }
   
   /* starts here */
+  
   .card {
     display: grid;
     gap: 0.5rem;
-    
+
     position: relative;
     overflow: hidden;
-    
+
     width: min(100% - 2rem, 35ch);
+
     margin-inline: auto;
     border-radius: 0.5rem;
 
-    
-    
     background-color: var(--bg-secondary);
     text-align: center;
-  }
+
+    min-height: 390px;   /* NUEVO */
+}
+.card__front {
+    padding: 3em 2em 3em 2em;
+    transition:
+        opacity 250ms ease,
+        transform 450ms ease;
+}
+
+.card__back {
+    position: absolute;
+    inset: 0;
+    overflow: auto;
+
+    padding: 1em 1.3em 3em 1.3em;
+
+    transition:
+        transform 450ms ease,
+        opacity 150ms ease;
+}  .card__back q {    
+    /*font-size:smaller;*/
+    font-size: 0.9em;
+}
   
   .card__name {
     font-weight: 700;
@@ -124,36 +147,22 @@
     border-radius: 50%;
     border: 2px solid var(--text-secondary);
   }
-  
-  .card__front {
-    padding: 2em 2em 2.5em 2em;
-    transition: 
-      opacity 250ms ease,
-      transform 450ms ease;
-  }
-  
+    
   .card[data-visible="false"] .card__front {
     opacity: 1;
     transform: translateY(0);
   }
   
   .card__footer {
-    position: relative;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
     height: 1.5rem;
+    
     background-color: var(--bg-primary);
     /*z-index: 5;*/
   }
   
-  .card__back {
-    position: absolute;
-    padding: 2em 2em 2.5em 2em;
-    inset: 0;
-    transition: 
-      transform 450ms ease,
-      opacity 150ms ease;
-    /*z-index: 1;*/
-    overflow: auto;
-  }
   
   .card[data-visible="false"] .card__back {
     opacity: 0;
@@ -184,9 +193,9 @@
   .card__toggle {
     text-align: 1;
     border-radius: 50%;
-    width: 3rem;
+    width: 2.3rem;
     aspect-ratio: 1 / 1;
-    padding: 0.5em;
+    padding: 0.2em;
     border: 0;
     background-color: var(--clr-primary);
     color: var(--text-primary);
@@ -201,7 +210,7 @@
   }
   
   .card__toggle-icon {
-    transition: rotate 250ms ease;
+    transition: rotate 250ms ease;   
   }
   
   .card[data-visible="true"] .card__toggle {
@@ -214,8 +223,7 @@
 
 @media (max-width: 1024px) {
    section {
-    margin-top: 6rem;
-    /*padding-block: clamp(2rem, 5vw, 5rem);*/
+    margin-top: 6rem;    
   }
 }
     
