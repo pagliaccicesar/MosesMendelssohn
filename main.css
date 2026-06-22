@@ -271,21 +271,20 @@ header {
 
 .footer-top { padding: var(--section-padding) 0; border-bottom: 1px solid var(--space-cadet); }
 .footer-brand, .footer-brand .logo { margin-bottom: 25px; }
-.footer-text { color: var(--heliotrope-gray); line-height: 1.6; font-size: var(--fs-4); text-align: justify; }
+.footer-text { color: var(--heliotrope-gray); line-height: 1.5; font-size: var(--fs-4); text-align: justify; }
 .footer-list { margin-bottom: 30px; }
-    .footer-list > li:not(:last-child) { margin-bottom: 20px; }
-.footer-link-title { font-size: var(--fs-2); font-weight: var(--fw-700); margin-bottom: 20px; }
-.footer-link { color: var(--heliotrope-gray); font-size: var(--fs-4); width: max-content; }
+    .footer-list > li:not(:last-child) { margin-bottom: 15px; }
+.footer-link-title { font-size: var(--fs-4); font-weight: var(--fw-700); }
+.footer-link { color: var(--heliotrope-gray); font-size: var(--fs-4); width: max-content; margin-bottom: 22px; }
     .footer-link:is(:hover, :focus) { color: var(--blue-ryb); }
 .social-title {
-    background: var(--gradient);
-    width: max-content;
+    background: var(--gradient);    
     font-size: var(--fs-2);
     font-weight: var(--fw-700);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .social-list { display: flex; justify-content: flex-start; align-items: center; gap: 10px; }
