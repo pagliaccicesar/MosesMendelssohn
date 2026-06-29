@@ -18,6 +18,7 @@
     --fs-3: 17px;
     --fs-4: 10px;
     --fs-5: 12px;
+    --fs-6: 15px;
 
     --fw-500: 500;
     --fw-700: 700;
@@ -169,7 +170,7 @@ HERO
 
 /*PODCAST*/
 
-.podcast { padding: 6px 0; }
+.podcast { padding: 46px 0; }
 
 /*.podcast { padding: var(--section-padding) 0; }*/
 .podcast-list { display: grid; gap: 30px; }
@@ -322,21 +323,14 @@ HERO
 
 /*MEDIA QUERIES*/
 @media(max-width: 549px) {
-    .hero-caption{
-    font-size: 8px;
-    text-align:right;
-    }
-    .hero-cover-text {
-        font-size: 12px;
-    }
+    .hero-caption{font-size: 8px; text-align:right;}
+    .hero-cover-text {font-size: var(--fs-6); line-height: 1.2;}
+    .hero-text {font-size: var(--fs-6); line-height: 1.2;}
 }
 
 @media(min-width: 550px) {
-    .container { max-width: 500px; margin-inline: auto; }
-    .hero-caption{
-    font-size: 10px;
-    text-align:right;
-}
+    .container { max-width: 500px; margin-inline: auto;}
+    .hero-caption{font-size: 10px; text-align:right;}
 }
 
 @media(min-width: 768px) {  
