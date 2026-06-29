@@ -2,6 +2,7 @@
     --flourescent-blue: #00f9ef;
     --heliotrope-gray: #aba6bd;
     --background: #8d7be7;
+    --background-2: rgba(63, 38, 204, 0.52);
     --russian-violet: #150849;
     --dark-violet: #0c003d;
     --space-cadet: #221d48;
@@ -70,7 +71,7 @@ body { background-color: var(--dark-violet); color: var(--white); }
     .btn-primary > span { margin-top: 3px; }
 
 .container { padding: 0 15px; }
-.h3 { color: var(--white); font-size: var(--fs-4); line-height: 1.5; }
+.h3 { color: var(--white); font-size: var(--fs-5); line-height: 1.5; }
 
 /*HEADER*/
 
@@ -215,7 +216,7 @@ HERO
     align-items: center;
     gap: 20px;
     color: var(--heliotrope-gray);
-    font-size: var(--fs-4);
+    font-size: var(--fs-6);
     margin-left: 35px;
     margin-bottom: 15px;
 }
@@ -243,7 +244,7 @@ HERO
 }
 
     .newsletter-card .card-title { font-size: var(--fs-1); line-height: 1.3; margin-bottom: 10px; }
-    .newsletter-card .card-text { font-size: var(--fs-4); line-height: 1.5; margin-bottom: 20px; color:white }
+    .newsletter-card .card-text { font-size: var(--fs-5); line-height: 1.5; margin-bottom: 20px; color:white }
     .newsletter-card .input-field {
         padding: 18px 15px;
         border-radius: 4px;
@@ -264,11 +265,11 @@ HERO
 
 .footer-top { padding: var(--section-padding) 0; border-bottom: 1px solid var(--space-cadet); }
 .footer-brand, .footer-brand .logo { margin-bottom: 25px; }
-.footer-text { color: var(--heliotrope-gray); line-height: 1.5; font-size: var(--fs-4); text-align: justify; }
+.footer-text { color: var(--heliotrope-gray); line-height: 1.5; font-size: var(--fs-6); text-align: justify; }
 .footer-list { margin-bottom: 30px; }
     .footer-list > li:not(:last-child) { margin-bottom: 15px; }
-.footer-link-title { font-size: var(--fs-4); font-weight: var(--fw-700); }
-.footer-link { color: var(--heliotrope-gray); font-size: var(--fs-4); width: max-content; margin-bottom: 22px; }
+.footer-link-title { font-size: var(--fs-6); font-weight: var(--fw-700); }
+.footer-link { color: var(--heliotrope-gray); font-size: var(--fs-6); width: max-content; margin-bottom: 22px; }
     .footer-link:is(:hover, :focus) { color: var(--blue-ryb); }
 .social-title {
     background: var(--gradient);    
@@ -579,7 +580,7 @@ section.agenda { padding: var(--section-padding-2) 0; }
   margin: 0 0 1em;
 }
 .event {
-  background-color: var(--background);
+  background-color: var(--background-2);
   margin-bottom: 1em;
   min-height: 120px;
 }

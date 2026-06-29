@@ -6,10 +6,11 @@
     <title>Cátedra Moses Mendelssohn FFyL UBA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="./equipo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Turret+Road:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./secciones.css">
     <link rel="shortcut icon" href="./img/fabicon.jpg" type="image/x-icon">
 </head>
+
 <body id="top">
     <header class="active" data-header>
         <div class="container">
@@ -21,88 +22,53 @@
             <button class="nav-toggle-btn" data-nav-toggle-btn><ion-icon name="menu-outline"></ion-icon></button>
 
             <nav class="navbar " data-navbar>
-                <ul class="navbar-list">                    
+                <ul class="navbar-list">
                     <li class="navbar-item"><a href="./index.html" class="navbar-link">Home</a></li>
-                    <li class="navbar-item"><a href="./Quiénes somos.html" class="navbar-link">Somos</a></li>
-                    <li class="navbar-item"><a href="./publicaciones.html" class="navbar-link">Publicaciones</a></li>
+                    <li class="navbar-item"><a href="./somos.html" class="navbar-link">Somos</a></li>
+                    <li class="navbar-item"><a href="./publicaciones.html" class="navbar-link">Publicaciones</a></li>                    
                     <li class="navbar-item"><a href="./presentaciones.html" class="navbar-link">Presentaciones</a></li>
-                    <li class="navbar-item"><a href="./conferencias.html" class="navbar-link">Conferencias</a></li>
-                    <li class="navbar-item"><a href="./difusion.html" class="navbar-link">Difusión</a></li>
+                    <li class="navbar-item"><a href="./conferencias.html" class="navbar-link">Conferencias</a></li>                    
                 </ul>
 
                 <div class="navbar-actions">                    
                     <button class="navbar-btn"><a href="#footer"><ion-icon name="chatbox-ellipses-outline"></ion-icon></a></button>
-                    <!--<button class="btn">
-                        <ion-icon name="heart-circle"></ion-icon>
-                        <span>Gracias!</span>
-                    </button>-->
+                    <a href="./donaciones.html"><button class="btn">
+                        <ion-icon name="heart-circle" style="color: white;"></ion-icon>
+                        <span>Donar</span>
+                    </button></a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main>      
-        <article class="container">
-            <section class="hero" id="hero">
-                <div class="hero-content">                    
-                    <!--<img src="./img/Sin título2.png" alt="Podcast" class="hero-title">-->
+    <main>
+        <article class="container">    
 
-                    <p class="hero-text">
-                        La Asociación Civil Moses Mendelssohn de Estudios Judíos es una institución sin fines de lucro que se constituyó 
-                        con el fin de desarrollar actividades y producciones culturales y académicas en el campo de los estudios judíos de 
-                        acceso libre y gratuito y especialmente apoyar y potenciar las actividades de la Cátedra Mendelssohn. Para mantener, 
-                        sustentar y mejorar el marco de este trabajo requerimos del apoyo de la comunidad. Invitamos así a hacer una 
-                        donación del monto que deseen.
-                        <br>
-                        Dejamos aquí los datos de las cuentas de la Asociación tanto para aportes desde Argentina como del extranjero.
-                    </p>
+            <section class="podcast" id="podcast">
+                <ul class="podcast-list" style="position: relative; align-items: center; justify-content: center; display: flex; flex-direction: column; margin-top: 130px; margin-bottom: 20px;">
+                    <h2>Reseñas radiales de “El Anaquel: libros de filosofía judía” en Radio Sefarad</h2>
+                    <li>
+                        <a href="https://www.radiosefarad.com/tag/pablo-dreizik/" class="podcast-card" target="_blank">
+                            <figure class="card-banner">
+                                <img src="./img/A2. Pablo Dreizik.jpg" alt="Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies">
 
-                    <div class="hero-btn-group">
-                        <a href="#cuentas"><button class="btn btn-primary">
-                            <ion-icon name="heart-circle"></ion-icon>
-                            <span>Cuentas</span>
-                        </button></a>
-                        
-                    </div>
-                </div>
+                                <div class="card-banner-icon">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </figure>
 
-                <div class="hero-banner"></div>
-            </section>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <!--<time datetime="2025-01-05">Jan 5, 2025</time>-->
 
-            <section id="cuentas">
-                
-                <div class="cuentas-titulo">                    
-                    <div class="cuentas-paypal">
-                        <h2 class="h2">Donaciones desde el extranjero:</h2>                        
-                            <a href="#cuentas"><button class="btn btn-primary">
-                                <ion-icon name="logo-paypal"></ion-icon>
-                                <span>Paypal</span>
-                            </button></a>                  
-                    </div>
-                </div>
+                                    <p class="pod-epi">Pablo Dreizi</p>
+                                </div>
 
-                
-
-                <div class="cuentas-titulo">                    
-                    <div class="cuentas-banco">
-                        <h2 class="h2">Donaciones desde Argentina:</h2>
-                        <a href="#cuentas">
-                            <div class="datos-bancarios">
-                                <h3>DEPÓSITO O TRANSFERENCIA BANCO GALICIA</h3>
-                                <p><strong>Caja de Ahorro:</strong> 4057595-1 027-2</p>
-                                <p><strong>CUIL:</strong> 23-28506069-9</p>
-                                <p><strong>CBU:</strong> 0070027630004057595129</p>
-                                <p><strong>ALIAS:</strong> catedramendelssohn</p>
-                                <p><strong>Enviar comprobante a:</strong><br>
-                                catedralibremendelssohn@gmail.com</p>
-                                <p class="aclaracion">
-                                    (Aclarar apellido y nombre)
-                                </p>
+                                <!--<h3 class="h3 card-title">Reseñas radiales de “El Anaquel: libros de filosofía judía” en Radio Sefarad</h3>-->
                             </div>
                         </a>
-                    </div>
-                </div>
-
+                    </li>                    
+                </ul>
             </section>
 
             <section class="newsletter">
@@ -120,8 +86,6 @@
                     </form>
                 </div>
             </section>
-
-            
         </article>
     </main>
 
@@ -134,9 +98,7 @@
                     </a>
 
                     <p class="footer-text" id="footer">
-                        <b style="color: #8D7BE7;">Nuestra Misión</b> es daily dose of inspiration and knowledge. We bring together visionaries, experts, and storytellers to create 
-                        compelling podcasts that educate, entertain, and spark meaningful conversations. Join our growing community of over 100,000 
-                        curious listeners.
+                        Micro is your daily dose of inspiration and knowledge. We bring together visionaries, experts, and storytellers to create compelling podcasts that educate, entertain, and spark meaningful conversations. Join our growing community of over 100,000 curious listeners.
                     </p>
                 </div>
 
@@ -173,7 +135,6 @@
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./team.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
