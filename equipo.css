@@ -69,14 +69,14 @@
   }
 
   .section-text {
-    text-align: justify;
+    text-align:start;
     font-size: clamp(0.9rem, 2vw, 0.8rem);
-    color: var(--text-secondary);
+    color: var(--text-primary);
     max-width: 100%;    
   }
 
   .section-list {
-    text-align: justify;
+    text-align: left;    
     font-size: clamp(0.9rem, 2vw, 0.8rem);
   }
   
