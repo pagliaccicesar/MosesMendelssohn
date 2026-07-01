@@ -2,7 +2,7 @@
     --flourescent-blue: #00f9ef;
     --heliotrope-gray: #aba6bd;
     --background: #8d7be7;
-    --background-2: rgba(63, 38, 204, 0.52);
+    --background-2: #3f26cc85;
     --russian-violet: #150849;
     --dark-violet: #0c003d;
     --space-cadet: #221d48;
@@ -238,7 +238,7 @@ HERO
 .newsletter { padding: var(--section-padding-newsletter) 0; }
 .newsletter-card { 
     /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
-    background: url('./img/fondo_newsletter.png') no-repeat center / cover;
+    background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
     border-radius: 12px;
 }

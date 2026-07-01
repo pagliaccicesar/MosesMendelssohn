@@ -552,7 +552,7 @@ header {
 .newsletter { padding: var(--section-padding-newsletter) 0; }
 .newsletter-card { 
     /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
-    background: url('./img/fondo_newsletter.png') no-repeat center / cover;
+    background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
     border-radius: 12px;
 }
