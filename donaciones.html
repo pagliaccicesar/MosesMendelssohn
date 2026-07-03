@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./equipo.css">
     <link rel="shortcut icon" href="./img/fabicon.jpg" type="image/x-icon">
 </head>
-<body id="top">
+<body id="hero">
     <header class="active" data-header>
         <div class="container">
             <div class="overlay " data-overlay></div>
@@ -26,29 +26,84 @@
                     <li class="navbar-item"><a href="./somos.html" class="navbar-link">Quiénes somos</a></li>
                     <li class="navbar-item"><a href="./publicaciones.html" class="navbar-link">Publicaciones</a></li>
                     <li class="navbar-item"><a href="./presentaciones.html" class="navbar-link">Presentaciones</a></li>
-                    <li class="navbar-item"><a href="./conferencias.html" class="navbar-link">Conferencias</a></li>
-                    <li class="navbar-item"><a href="./fotos.html" class="navbar-link">Fotografías</a></li>
+                    <li class="navbar-item"><a href="./conferencias.html" class="navbar-link">Conferencias</a></li>                    
                     <li class="navbar-item"><a href="./difusion.html" class="navbar-link">Difusión</a></li>
+                    <li class="navbar-item"><a href="./fotos.html" class="navbar-link">Fotografías</a></li>
                 </ul>
 
                 <div class="navbar-actions">                    
                     <button class="navbar-btn"><a href="#footer"><ion-icon name="chatbox-ellipses-outline"></ion-icon></a></button>
-                    <!--<button class="btn">
-                        <ion-icon name="heart-circle"></ion-icon>
-                        <span>Gracias!</span>
-                    </button>-->
+                    
                 </div>
             </nav>
         </div>
     </header>
 
+    <style>
+                .content1{
+                    margin-top: 130px;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    grid-template-areas:
+                        "texto imagen"
+                        "boton imagen";
+                    align-items: center;
+                    gap: 40px;
+                }
+                /* Texto */
+                .text1{
+                    grid-area: texto;
+                    text-align: justify;
+                    line-height: 1.8;
+                }
+                /* Imagen */
+                .title11{
+                    grid-area: imagen;
+                    max-width: 380px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+                /* Botón */
+                .btn-group{
+                    grid-area: boton;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 1px;
+                }
+
+                @media (max-width:768px){
+                .content1{
+                    grid-template-columns: 1fr;
+                    grid-template-areas:
+                        "imagen"
+                        "texto"
+                        "boton";
+                    gap: 25px;
+                    text-align: center;
+                }
+                .title11{
+                    max-width:320px;
+                    width:90%;
+                    margin:auto;                  
+                }
+                .text1{
+                    text-align:justify;
+                }
+                .btn-group{
+                    justify-content:center;
+                }
+
+            }
+    </style>
+
     <main>      
         <article class="container">
-            <section class="hero" id="hero">
-                <div class="hero-content">                    
-                    <!--<img src="./img/Sin título2.png" alt="Podcast" class="hero-title">-->
+            <section>
+                <div class="content1">                 
 
-                    <p class="hero-text">
+                    <p class="text1" style="line-height: 2.9;">
                         La Asociación Civil Moses Mendelssohn de Estudios Judíos es una institución sin fines de lucro que se constituyó 
                         con el fin de desarrollar actividades y producciones culturales y académicas en el campo de los estudios judíos de 
                         acceso libre y gratuito y especialmente apoyar y potenciar las actividades de la Cátedra Mendelssohn. Para mantener, 
@@ -58,17 +113,25 @@
                         Dejamos aquí los datos de las cuentas de la Asociación tanto para aportes desde Argentina como del extranjero.
                     </p>
 
-                    <div class="hero-btn-group">
+                    <img src="./img/Le Juif à la Torah.png" alt="Podcast" class="title11" >
+
+                    <div class="btn-group">
                         <a href="#cuentas"><button class="btn btn-primary">
                             <ion-icon name="heart-circle"></ion-icon>
                             <span>Cuentas</span>
-                        </button></a>
-                        
+                        </button></a>                        
                     </div>
+
                 </div>
 
                 <div class="hero-banner"></div>
             </section>
+
+
+
+
+
+
 
             <section id="cuentas">
                 
@@ -170,7 +233,7 @@
         </div>
     </footer>
 
-    <a href="#top" class="go-top" data-go-top><ion-icon name="chevron-up-outline"></ion-icon></a>
+    <a href="#hero" class="go-top" data-go-top><ion-icon name="chevron-up-outline"></ion-icon></a>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

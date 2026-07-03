@@ -511,10 +511,10 @@ header {
 
 
 /*   cuentas   de Donaciones   */
-#cuentas { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 30px; padding-top: 130px; }
+#cuentas { display: grid; grid-template-columns: 1fr ; align-items: center; gap: 50px; padding-top: 130px; }
 
 .cuentas-titulo { display: flex; align-items: center; justify-content: space-between; gap: 100px; }
-.cuentas-paypal { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 140px; }
+.cuentas-paypal { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
 .cuentas-banco { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .datos-bancarios{
     max-width: 700px;
@@ -748,15 +748,14 @@ header {
     .hero-btn-group { flex-wrap: wrap-reverse; gap: 35px; }
         .hero :is(.btn-primary, .btn-title, .btn-link) {--fs-4: 17px; }
 
-    .hero-banner {
+    /*.hero-banner {
         display: block;        
         
         max-height: 772px;
         padding-top: 100%;
         background: url('./img/Le\ Juif\ à\ la\ Torah.png') no-repeat;
-        background-size: cover;
-        /*border-radius: 100px;*/
-    }
+        background-size: cover;       
+    }*/
 
 
 
