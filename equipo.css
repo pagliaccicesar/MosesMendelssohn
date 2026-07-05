@@ -106,39 +106,39 @@
 
   /* portada  de  donacionaes */
   .content1{
-                    margin-top: 130px;
-                    display: grid;
-                    grid-template-columns: 1fr auto;
-                    grid-template-areas:
-                        "texto imagen"
-                        "boton imagen";
-                    align-items: center;
-                    gap: 40px;
-                }
-                /* Texto */
-                .text1{
-                    grid-area: texto;
-                    text-align: justify;
-                    line-height: 2.8;                   
-                }
-                /* Imagen */
-                .title11{
-                    grid-area: imagen;
-                    max-width: 380px;
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                    margin: 0 auto;
-                }
-                /* Botón */
-                .btn-group{
-                    grid-area: boton;
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 1px;
-                }
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "texto imagen"
+      "boton imagen";
+    align-items: center;
+    gap: 40px;
+  }
+  /* Texto */
+  .text1{
+    grid-area: texto;
+    text-align: justify;
+    line-height: 2.8;                   
+  }
+  /* Imagen */
+  .title11{
+    grid-area: imagen;
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Botón */
+  .btn-group{
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;                                
+}
 
-                @media (max-width:768px){
+                @media (max-width:1024px){
                 .content1{
                     grid-template-columns: 1fr;
                     grid-template-areas:
@@ -469,14 +469,27 @@ header {
     font-weight: var(--fw-700);
     margin-bottom: 25px;
 }
-.hero-initial {
-    font-size: var(--fs-3);
-    /*font-weight: var(--fw-700);*/
-    color: var(--flourescent-blue);
-    /*float: left;
-    line-height: 1;
-    margin-right: 5px;*/
+.hero-initial {       
+    display: inline-block;
+    font-size: var(--fs-1);
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    margin-bottom: 15px;
+    background: linear-gradient(
+        90deg,        
+        #9be7ff 0%,
+        #8d7be7 25%,
+        #4fc3f7 50%,        
+        #0288d1 75%,
+        #0052ff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(149, 249, 246, 0.35);
 }
+
 
 .hero-banner { display: none; }
 
@@ -544,9 +557,69 @@ header {
     }
 
 /*   cuentas   de Donaciones   */
-#cuentas { display: grid; grid-template-columns: 1fr ; align-items: center; gap: 50px; padding-top: 130px; }
+/*#cuentas { display: grid; grid-template-columns: 1fr ; align-items: center; gap: 50px; padding-top: 130px; }*/
+@media (max-width: 992px) {
+  #cuentas {
+    font-size: 60px;
+  }
+}
+#cuentas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    font-size: 1.7rem; 
+}
+.card_donacion {
+    width: 30rem;
+    height: 12rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9rem;
+    line-height: 1.7;
+    border: 1px solid;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 0 5px #ffffff;   
+    overflow: hidden;
+}
+.arrow-btn, .arrow-btn-1 {
+    flex-shrink: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background-color: var(--blue-ryb);
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-.cuentas-titulo { display: flex; align-items: center; justify-content: space-between; gap: 100px; }
+@media (max-width: 570px){
+    #cuentas {
+        font-size: 1.1rem;
+        padding-top: 50px;
+        padding-bottom: 5px;             
+  }
+    .card_donacion {
+        width: 20rem;
+        height: 9rem;
+        padding: 1rem 1.2rem;   
+        gap: 0.9rem;
+        line-height: 1.7;
+        border: 1px solid;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 0 3px #ffffff;   
+    }    
+}
+
+/*.cuentas-titulo { display: flex; align-items: center; justify-content: space-between; gap: 100px; }
 .cuentas-paypal { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
 .cuentas-banco { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
 .datos-bancarios{
@@ -576,7 +649,7 @@ header {
 .aclaracion{        
     font-style: italic;
     color: #ccc;
-}
+}*/
 
 /*NEWSLETTER*/
 
@@ -691,8 +764,8 @@ header {
     .podcast-list { grid-template-columns: 1fr 1fr; }
 
     .newsletter-card { padding: 50px; }
-        .newsletter-card .btn-primary { position: absolute; top: 4px; right: 4px; bottom: 4px; width: 140px; }
-        .newsletter-card .input-field { padding-right: 155px; }
+    .newsletter-card .btn-primary { position: absolute; top: 4px; right: 4px; bottom: 4px; width: 140px; }
+    .newsletter-card .input-field { padding-right: 155px; }
     .card-form { position: relative; }
 
     .footer-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 50px; }
@@ -778,14 +851,18 @@ header {
     .hero-text { margin-bottom: 25px; }
     .hero-btn-group { flex-wrap: wrap-reverse; gap: 35px; }
     .hero :is(.btn-primary, .btn-title, .btn-link) {--fs-4: 17px; }
-    
+
+    .hero-initial{   
+    font-size: var(--fs-1);
+    font-weight: 700;
+    letter-spacing: 1.7px;
+   
+}    
     .podcast-list { grid-template-columns: repeat(4, 1fr); }
     .footer-link-title { --fs-2: 22px; margin-bottom: 10px; }
     .social-title { margin-left: auto; margin-bottom: 35px; }
     .social-link { width: 45px; height: 45px; font-size: 22px;}
-
 }
-
 
 /*iframe {width: 260px; height: 157px;}*/
 /* MOBILE */
