@@ -77,41 +77,14 @@
                 <div class="arrow-btn"><ion-icon name="logo-paypal"></ion-icon></div>
                 </div>
                 <div class="card_donacion">Donaciones desde Argentina. Datos de cuenta →
-                <div class="arrow-btn-1"><ion-icon name="logo-usd"></ion-icon></div>
-                </div>  
-
+                <div class="arrow-btn-1" id="abrirPopup">
+                    <ion-icon name="logo-usd"></ion-icon>
+                </div>
+                </div>
                 
-                <!--<div class="cuentas-titulo">                    
-                    <div class="cuentas-paypal">
-                        <h2 class="h2">Donaciones desde el extranjero:</h2>                        
-                            <a href="#cuentas"><button class="btn btn-primary">
-                                <ion-icon name="logo-paypal"></ion-icon>
-                                <span>Paypal</span>
-                            </button></a>                  
-                    </div>
-                </div>             
-
-                <div class="cuentas-titulo">                    
-                    <div class="cuentas-banco">
-                        <h2 class="h2">Donaciones desde Argentina:</h2>
-                        <a href="#cuentas">
-                            <div class="datos-bancarios">
-                                <h3>DEPÓSITO O TRANSFERENCIA BANCO GALICIA</h3>
-                                <p><strong>Caja de Ahorro:</strong> 4057595-1 027-2</p>
-                                <p><strong>CUIL:</strong> 23-28506069-9</p>
-                                <p><strong>CBU:</strong> 0070027630004057595129</p>
-                                <p><strong>ALIAS:</strong> catedramendelssohn</p>
-                                <p><strong>Enviar comprobante a:</strong><br>
-                                catedralibremendelssohn@gmail.com</p>
-                                <p class="aclaracion">
-                                    (Aclarar apellido y nombre)
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>-->
-
             </section>
+
+            
 
             <section class="newsletter">
                 <div class="newsletter-card">
@@ -181,7 +154,31 @@
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./team.js"></script>
-    <script src="./main.js"></script>
+    
+    <!-- <script src="./main.js"></script> -->
+
+    <!-- POPUP DONACIONES ARGENTINA -->
+<div id="popupArgentina" class="popup-overlay">
+    <div class="popup-box">
+        <button class="popup-close" id="cerrarPopup">&times;</button>
+        <h3>DEPÓSITO O TRANSFERENCIA BANCO GALICIA</h3>
+        <p><strong>Caja de Ahorro:</strong><br>4057595-1 027-2</p>
+        <p><strong>CUIL:</strong><br>23-28506069-9</p>
+        <p><strong>CBU:</strong><br>0070027630004057595129</p>
+        <p><strong>ALIAS:</strong><br>catedramendelssohn</p>
+        <p>
+            <strong>Enviar comprobante a:</strong><br>
+            catedralibremendelssohn@gmail.com
+        </p>
+        <p class="aclaracion">
+            (Aclarar apellido y nombre)
+        </p>
+    </div>
+</div>
+<script src="./team.js"></script>
+                
+
+
 </body>
 </html>
+

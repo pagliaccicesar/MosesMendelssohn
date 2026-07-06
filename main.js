@@ -54,47 +54,31 @@ const popupImg = document.getElementById("popupImage");
 const closePopup = document.querySelector(".popup-close");
 
 document.querySelectorAll(".podcast-card").forEach(card => {
-
     card.addEventListener("click", function(e){
-
         e.preventDefault();
-
         const img = this.querySelector("img");
-
         popupImg.src = img.src;
         popupImg.alt = img.alt;
-
         popup.classList.add("active");
-
     });
-
 });
 
 closePopup.addEventListener("click", ()=>{
-
     popup.classList.remove("active");
-
 });
 
 popup.addEventListener("click",(e)=>{
-
     if(e.target===popup){
-
         popup.classList.remove("active");
-
     }
-
 });
 
 document.addEventListener("keydown",(e)=>{
-
     if(e.key==="Escape"){
-
         popup.classList.remove("active");
-
     }
-
 });
+
 
 
 
