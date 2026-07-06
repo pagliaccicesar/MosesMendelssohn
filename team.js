@@ -15,6 +15,38 @@ cardControllers.forEach(controller => {
 })
 
 
+//  probando menu
+'use strict';
+
+const elemToggleFunc = function (elem) { elem.classList.toggle('active'); }
+
+const navbar = document.querySelector('[data-navbar]');
+const overlay = document.querySelector('[data-overlay]');
+const navToggleBtn = document.querySelector('[data-nav-toggle-btn]');
+
+const navElemArr = [overlay, navToggleBtn];
+
+for(let i = 0; i < navElemArr.length; i++) {
+    navElemArr[i].addEventListener('click', function () {
+        elemToggleFunc(navbar);
+        elemToggleFunc(overlay);
+    });
+}
+// Header sticky  probando menu
+const headerElem = document.querySelector('[data-header]');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', function () {
+    let scrollPosition = window.pageYOffset;
+
+    if(scrollPosition > lastScrollPosition) { headerElem.classList.remove('active'); } else { headerElem.classList.add('active'); }
+
+    lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
+    
+});
+
+
+
 // js de popup de cuentas de donaciones
 
 const abrirPopup = document.getElementById("abrirPopup");

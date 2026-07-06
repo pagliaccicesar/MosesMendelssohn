@@ -61,11 +61,31 @@
   }
   
   .section-title {
-    font-size: clamp(1.5rem, 3vw, 0.8rem);
+    /*font-size: clamp(1.5rem, 3vw, 0.8rem);
     text-align: center;
     font-weight: bold;
     color: var(--text-primary);
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em;*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: var(--fs-3);
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    margin-bottom: 15px;
+    background: linear-gradient(
+        90deg,        
+        #9be7ff 0%,
+        #8d7be7 25%,
+        #4fc3f7 50%,        
+        #0288d1 75%,
+        #0052ff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(149, 249, 246, 0.35);
   }
 
   .section-text {
