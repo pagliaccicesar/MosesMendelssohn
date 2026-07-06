@@ -433,6 +433,7 @@ header {
     .overlay { position: fixed; inset: 0; pointer-events: none; z-index: 1; transition: var(--transition); }
     .overlay.active { pointer-events: all; background: hsla(0, 0%, 0%, .7); }
 
+    
 /*HERO*/
 
 .hero { padding: 140px 0 var(--section-padding); }
@@ -603,7 +604,7 @@ header {
 
 .arrow-btn-1{
     cursor:pointer;
-    z-index:9999;
+    
     position:relative;
 }
 
