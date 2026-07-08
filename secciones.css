@@ -221,7 +221,7 @@ header {
 .podcast-card:is(:hover, :focus) .card-banner-icon { background: var(--white); color: var(--blue-ryb); }
 
 .podcast-card .card-title {
-    display: inline;
+    display: block;
     padding: 3px 0;
     background: var(--gradient);
     background-position: 0 95%;
@@ -230,11 +230,11 @@ header {
     transition: var(--transition);
 }
 
-.podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; z-index: 2000; }    
+.podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; z-index: 2000; }
 
 
 .card-meta {
-    position: relative;
+    /*position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,7 +242,7 @@ header {
     color: var(--heliotrope-gray);
     font-size: var(--fs-4);
     margin-left: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 15px;*/
 }
 
  
@@ -266,6 +266,138 @@ header {
     line-height: 1.1;
     padding: 1rem;
     z-index: 2;
+}
+
+/* PUBLICACIONES*/
+/* ==========================
+   LISTA DE PUBLICACIONES
+========================== */
+
+.podcast-list-publi-3 {
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+/* Cada tarjeta */
+
+.podcast-card-3{
+    display:flex;
+    align-items:flex-start;
+    gap:30px;
+
+    width:100%;
+    padding:25px;
+
+    background:var(--dark-violet);
+    border-radius:10px;
+
+    text-decoration:none;
+    color:#fff;
+
+    transition:.3s;
+}
+
+.podcast-card-3:hover{
+    background:#1b1b1b;
+}
+
+/* Imagen */
+
+.card-banner-3{
+      width:240px;
+    flex-shrink:0;
+  
+}
+
+.card-banner-3 img{
+    width:100%;
+    display:block;
+    border-radius:8px;
+}
+
+/* Texto */
+
+.card-content-3{
+    flex:1;
+     min-width:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+
+.card-title-3{
+    margin:12px 0;
+    font-size:1.35rem;
+    line-height:1.4;
+}
+
+.card-title-3 a{
+    color:#76bfff;
+    text-decoration:none;
+}
+
+.card-title-3 a:hover{
+    text-decoration:underline;
+}
+
+.pod-epi-3{
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+.pod-epi-3 a{
+    color:#69b9ff;
+    text-decoration:none;
+}
+
+.pod-epi-3   a:hover{
+    text-decoration:underline;
+}
+@media (max-width:1000px){
+
+    .podcast-card-3{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        padding:20px;
+    }
+
+    .card-banner-3{
+
+        flex:none;
+
+        width:100%;
+
+        max-width:350px;
+    }
+
+    .card-banner-3 img{
+
+        width:100%;
+
+        height:auto;
+    }
+
+    .card-content-3{
+
+        width:100%;
+    }
+
+    .card-title-3{
+
+        margin-top:20px;
+    }
+
 }
 
 
