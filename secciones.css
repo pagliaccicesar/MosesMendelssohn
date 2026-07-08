@@ -234,7 +234,7 @@ header {
 
 
 .card-meta {
-    /*position: relative;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,7 +242,7 @@ header {
     color: var(--heliotrope-gray);
     font-size: var(--fs-4);
     margin-left: 0px;
-    margin-bottom: 15px;*/
+    margin-bottom: 15px;
 }
 
  
@@ -302,7 +302,7 @@ header {
 }
 
 .podcast-card-3:hover{
-    background:#1b1b1b;
+    background:var(--background-2);
 }
 
 /* Imagen */
@@ -671,14 +671,14 @@ header {
     margin:0;
 }
 .desc a {
-    color:#00f9ef;
+    color:#ffffff;
     font-weight:500;
     text-decoration:none;
     transition:.3s;
     word-break:break-word;
 }
 .desc a:hover {
-    color:#ffffff;
+    color:var(--blue-ryb);
     text-decoration:underline;
 }
 /* columnas */
