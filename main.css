@@ -128,10 +128,6 @@ header {
 
 /*HERO*/
 
- /*==================================================
-HERO
-==================================================*/
-
 .hero{
     padding:140px 0 50px;
 }
@@ -172,8 +168,6 @@ HERO
 /*PODCAST*/
 
 .podcast { padding: 46px 0; }
-
-/*.podcast { padding: var(--section-padding) 0; }*/
 .podcast-list { display: grid; gap: 30px; }
 .podcast-card { border-radius: 4px;}
 .card-banner { position: relative; border-radius: 8px; overflow: hidden; margin-bottom: 20px; z-index: 1; }
@@ -196,7 +190,6 @@ HERO
 }
 
     .podcast-card:is(:hover, :focus) .card-banner-icon { background: var(--white); color: var(--blue-ryb); }
-
     .podcast-card .card-title {
         display: inline;
         padding: 3px 0;
@@ -207,7 +200,7 @@ HERO
         transition: var(--transition);
     }
 
-        .podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; }
+    .podcast-card:is(:hover, :focus) .card-title { background-size: 100% 2px; }
 
 .card-meta {
     position: relative;
@@ -236,8 +229,7 @@ HERO
 /*NEWSLETTER*/
 
 .newsletter { padding: var(--section-padding-newsletter) 0; }
-.newsletter-card { 
-    /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
+.newsletter-card {   
     background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
     border-radius: 12px;
@@ -336,12 +328,13 @@ HERO
 @media(max-width: 549px) {
     .hero-caption{font-size: 8px; text-align:right;}
     .hero-cover-text {font-size: var(--fs-6); line-height: 1.2;}
-    .hero-text {font-size: var(--fs-6); line-height: 1.2;}
+    .hero-text {font-size: var(--fs-5); line-height: 1.2;}
 }
 
 @media(min-width: 550px) {
     .container { max-width: 500px; margin-inline: auto;}
     .hero-caption{font-size: 10px; text-align:right;}
+    .hero-cover-text {font-size: var(--fs-3); line-height: 1.2;}
 }
 
 @media(min-width: 768px) {  
@@ -393,6 +386,7 @@ HERO
     box-shadow:0 18px 40px rgba(0,0,0,.35);
 }
 
+
 .hero-text{
     max-width:900px;
     font-size:17px;
@@ -415,6 +409,7 @@ HERO
     color:rgba(255,255,255,.65);
     font-style:italic;
 }
+
 
 /* resto del sitio */
 
@@ -504,18 +499,29 @@ HERO
             transition: var(--transition);
         }
 
-        .navbar-link:is(:hover, :focus) { background: var(--gradient); -webkit-text-fill-color: transparent; -webkit-background-clip: text; background-clip: text; }
-            .navbar-link:is(:hover, :focus)::after { --scale: 1; }
+    .navbar-link:is(:hover, :focus) { background: var(--gradient); -webkit-text-fill-color: transparent; -webkit-background-clip: text; background-clip: text; }
+    .navbar-link:is(:hover, :focus)::after { --scale: 1; }
     .navbar-actions { gap: 10px; }
-        .navbar-actions .btn { background: var(--blue-ryb); padding: 15px 25px; transition: background var(--transition); }
-            .navbar-actions .btn:is(:hover, :focus) { background: hsl(221, 100%, 40%); }
+    .navbar-actions .btn { background: var(--blue-ryb); padding: 15px 25px; transition: background var(--transition); }
+    .navbar-actions .btn:is(:hover, :focus) { background: hsl(221, 100%, 40%); }
 
 /* HERO */
+.hero{
+    padding-top:100px;
+}
+.hero-title{
+    max-width:600px;
+}
 
 .hero-content{
     max-width:1000px;
     margin:auto;
 }
+/* ===========================
+   HERO DESKTOP
+=========================== */
+
+
     .podcast-list { grid-template-columns: repeat(3, 1fr); }
     .newsletter-card { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
     .newsletter-card .card-content, .card-form { width: 50%; }
@@ -546,7 +552,7 @@ HERO
 }
 
 .hero-title{
-    max-width:850px;
+    max-width:800px;
 }
 
 .hero-cover-text{
@@ -574,6 +580,7 @@ HERO
     .social-title { margin-left: auto; margin-bottom: 35px; }
     .social-link { width: 45px; height: 45px; font-size: 22px;}
 }
+
 
 /******* Agenda  ********/
 section.agenda { padding: var(--section-padding-2) 0; }
@@ -688,7 +695,7 @@ section.agenda { padding: var(--section-padding-2) 0; }
   margin-bottom: 0;
 }
 
-/*iframe {width: 260px; height: 157px;}*/
+
 /* MOBILE */
 .video-wrapper{
     position: relative;
