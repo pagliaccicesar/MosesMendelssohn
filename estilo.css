@@ -33,7 +33,7 @@
 *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 li { list-style: none; }
 a { text-decoration: none; }
-a, img, span, input, button, ion-icon { display: block; }
+a, img, span, input, button, ion-icon { display: block; color: inherit; }
     button { cursor: pointer; border: none; }
     input { font:inherit; border:none; width: 100%; }
 :focus { outline-offset: 4px; }
@@ -46,6 +46,7 @@ body { background-color: var(--dark-violet); color: var(--white); }
 ::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, .6); }
 
 .btn {
+    background: var(--blue-ryb);
     color: var(--white);
     font-size: var(--fs-4);
     display: flex;
@@ -89,7 +90,7 @@ header {
 
     header.active { top: 0; }
     header .container { display: flex; align-items: center; justify-content: space-between; }
-    .nav-toggle-btn { color: var(--white); font-size: 35px; border-radius: 4px; }
+    .nav-toggle-btn { color: var(--white); font-size: 35px; border-radius: 4px; background: none;}
     .nav-toggle-btn ion-icon { --ionicon-stroke-width: 40px; }
     .navbar {
         position: fixed;
@@ -115,14 +116,14 @@ header {
             background: hsla(0, 0%, 100%, .05);
             border-radius: 5px;
         }
-    a .btn-primary { font:inherit; text-decoration: none;}
+   /* a .btn-primary { font:inherit; text-decoration: none;}*/
     .navbar.active { bottom: 0; visibility: visible; transition: .25s ease-out; }
     .navbar-list { padding-bottom: 5px; border-bottom: 1px solid hsla(0, 0%, 100%, .05); margin-bottom: 5px; }
     .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 10px; border-radius: 4px; }
     .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
     .navbar-actions { display: flex; justify-content: space-around; align-items: center; }
-    .navbar-btn { color: var(--white); font-size: 25px; padding: 5px; border-radius: 4px; }
-    .navbar-btn:is(:hover, :focus), .navbar-actions .btn:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
+    .navbar-btn {  font-size: 25px; padding: 5px; border-radius: 4px; background: none; }
+    .navbar-btn:is(:hover, :focus), .navbar-actions .btn:is(:hover, :focus) { color: var(--blue-ryb);}
     .overlay { position: fixed; inset: 0; pointer-events: none; z-index: 1; transition: var(--transition); }
     .overlay.active { pointer-events: all; background: hsla(0, 0%, 0%, .7); }
 

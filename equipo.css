@@ -61,11 +61,6 @@
   }
   
   .section-title {
-    /*font-size: clamp(1.5rem, 3vw, 0.8rem);
-    text-align: center;
-    font-weight: bold;
-    color: var(--text-primary);
-    margin-bottom: 0.5em;*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
     text-align: center;

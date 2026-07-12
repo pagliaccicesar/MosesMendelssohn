@@ -48,6 +48,7 @@ body { background-color: var(--dark-violet); color: var(--white); }
 h2 {font-family: var(--ff-josefin); font-size: var(--fs-2); font-weight: var(--fw-500); color: var(--flourescent-blue); margin-bottom: 15px; }
 
 .btn {
+    background: var(--blue-ryb);
     color: var(--white);
     font-size: var(--fs-4);
     display: flex;
