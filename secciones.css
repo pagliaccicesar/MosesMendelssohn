@@ -218,11 +218,14 @@ header {
     font-size: 20px;
     transition: var(--transition);
 }
+.card-banner-icon:hover {
+    background-color: var(--blue-ryb);
+}
 
 .podcast-card:is(:hover, :focus) .card-banner-icon { background: var(--white); color: var(--blue-ryb); }
 
 .podcast-card .card-title {
-    display: block;
+    display: block; 
     padding: 3px 0;
     background: var(--gradient);
     background-position: 0 95%;
@@ -292,28 +295,21 @@ header {
 
     width:100%;
     padding:25px;
-
     background:var(--dark-violet);
     border-radius:10px;
-
     text-decoration:none;
     color:#fff;
-
     transition:.3s;
 }
-
 .podcast-card-3:hover{
-    background:var(--background-2);
+    background:var(--russian-violet);
 }
 
 /* Imagen */
-
 .card-banner-3{
-      width:240px;
-    flex-shrink:0;
-  
+    width:240px;
+    flex-shrink:0;  
 }
-
 .card-banner-3 img{
     width:100%;
     display:block;
@@ -321,7 +317,6 @@ header {
 }
 
 /* Texto */
-
 .card-content-3{
     flex:1;
      min-width:0;
@@ -329,7 +324,6 @@ header {
     flex-direction:column;
     justify-content:flex-start;
 }
-
 
 .card-title-3{
     margin:12px 0;
