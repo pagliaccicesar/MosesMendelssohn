@@ -397,8 +397,8 @@ header {
 
 
 /*NEWSLETTER*/
-
-.newsletter { padding: var(--section-padding-newsletter) 0; }
+.newsletter { padding: var(--section-padding-newsletter) 0; width: 75%; margin: 0 auto }
+/*.newsletter { padding: var(--section-padding-newsletter) 0; }*/
 .newsletter-card {    
     background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
@@ -488,6 +488,9 @@ header {
 
 @media(min-width: 550px) {
     .container { max-width: 500px; margin-inline: auto; }
+}
+@media(max-width: 549px) {
+    .newsletter { padding: 55px 0; width: 95%; margin: 0 auto }
 }
 
 @media(min-width: 768px) {

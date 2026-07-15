@@ -227,8 +227,9 @@ header {
 
 
 /*NEWSLETTER*/
+.newsletter { padding: var(--section-padding-newsletter) 0; width: 75%; margin: 0 auto }
 
-.newsletter { padding: var(--section-padding-newsletter) 0; }
+/*.newsletter { padding: var(--section-padding-newsletter) 0; }*/
 .newsletter-card {   
     background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
@@ -335,6 +336,9 @@ header {
     .container { max-width: 500px; margin-inline: auto;}
     .hero-caption{font-size: 10px; text-align:right;}
     .hero-cover-text {font-size: var(--fs-3); line-height: 1.2;}
+}
+@media(max-width: 549px) {
+    .newsletter { padding: 15px 0; width: 95%; margin: 0 auto }
 }
 
 @media(min-width: 768px) {  

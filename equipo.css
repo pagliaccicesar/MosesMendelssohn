@@ -440,7 +440,7 @@ header {
 
     .navbar.active { bottom: 0; visibility: visible; transition: .25s ease-out; }
     .navbar-list { padding-bottom: 5px; border-bottom: 1px solid hsla(0, 0%, 100%, .05); margin-bottom: 5px; }
-    .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 10px; border-radius: 4px; }
+    .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 17px 2px; border-radius: 4px; text-align: justify;}
     .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
     .navbar-actions { display: flex; justify-content: space-around; align-items: center; }
     .navbar-btn a { color:var(--white); font-size: 25px; padding: 5px; border-radius: 4px; }    
@@ -760,9 +760,9 @@ header {
 
 /*NEWSLETTER*/
 
-.newsletter { padding: var(--section-padding-newsletter) 0; }
+.newsletter { padding: var(--section-padding-newsletter) 0; width: 75%; margin: 0 auto }
 .newsletter-card { 
-    /*background: url('https://i.postimg.cc/Qt21Vf8N/newsletter-bg.jpg') no-repeat center / cover;*/
+    
     background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
     border-radius: 12px;
@@ -851,6 +851,9 @@ header {
 
 @media(min-width: 550px) {
     .container { max-width: 500px; margin-inline: auto; }
+}
+@media(max-width: 549px) {
+    .newsletter { padding: 75px 0; width: 95%; margin: 0 auto }
 }
 
 @media(min-width: 768px) {

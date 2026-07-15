@@ -120,7 +120,7 @@ header {
    /* a .btn-primary { font:inherit; text-decoration: none;}*/
     .navbar.active { bottom: 0; visibility: visible; transition: .25s ease-out; }
     .navbar-list { padding-bottom: 5px; border-bottom: 1px solid hsla(0, 0%, 100%, .05); margin-bottom: 5px; }
-    .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 10px; border-radius: 4px; }
+    .navbar-link { color: var(--white); font-size: var(--fs-5); padding: 17px 2px; border-radius: 4px; text-align: justify;}
     .navbar-link:is(:hover, :focus) { background: hsla(0, 0%, 100%, .1); }
     .navbar-actions { display: flex; justify-content: space-around; align-items: center; }
     .navbar-btn {  font-size: 25px; padding: 5px; border-radius: 4px; background: none; }
@@ -254,8 +254,9 @@ header {
 
 
 /*NEWSLETTER*/
+.newsletter { padding: var(--section-padding-newsletter) 0; width: 75%; margin: 0 auto }
 
-.newsletter { padding: var(--section-padding-newsletter) 0; }
+/*.newsletter { padding: var(--section-padding-newsletter) 0; }*/
 .newsletter-card {   
     background: url('./img/fondo_news.png') no-repeat center / cover;
     padding: 60px 20px;
@@ -358,6 +359,9 @@ header {
     .hero-title {padding-top: 12px;}
     .hero-text {font-size: var(--fs-7); line-height: 1.2; max-width: 400px; padding-top: 16px; text-align: center;}
 }
+@media(max-width: 549px) {
+    .newsletter { padding: 15px 0; width: 95%; margin: 0 auto }
+}
 
 @media(min-width: 550px) {
     .container { max-width: 500px; margin-inline: auto;}
@@ -431,7 +435,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 }
 
 .newsletter-card{
-    padding:50px;
+    padding:30px;
 }
 
 .newsletter-card .btn-primary{
@@ -439,7 +443,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     top:4px;
     right:4px;
     bottom:4px;
-    width:140px;
+    width:100px;
 }
 
 .newsletter-card .input-field{
@@ -520,7 +524,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 
     .podcast-list { grid-template-columns: repeat(3, 1fr); }
     .newsletter-card { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
-    .newsletter-card .card-content, .card-form { width: 50%; }
+    .newsletter-card .card-content, .card-form { width: 70%; }
     .newsletter-card .card-text, .newsletter-card .input-field { margin-bottom: 0; }
 
     .hero{
@@ -646,6 +650,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 }
 
 @media(min-width: 1200px) {
+    
     :root {
         --section-padding: 30px;
     }
