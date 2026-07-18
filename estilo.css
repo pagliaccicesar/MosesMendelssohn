@@ -363,7 +363,7 @@ header {
 @media(max-width: 549px) {
     .newsletter { padding: 15px 0; width: 95%; margin: 0 auto }
     .hero-text {font-size: var(--fs-7); line-height: 1.2; max-width: 600px; padding-top: 16px; text-align: center;}
-    .scroll { padding-top: 15px; font-size: larger; color: var(--flourescent-blue);}
+    .scroll { padding-top: 15px; font-size: larger; color: var(--blue-ryb);}
 }
 
 @media(min-width: 550px) {

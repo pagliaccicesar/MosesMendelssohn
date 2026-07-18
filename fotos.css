@@ -382,7 +382,8 @@ header {
         --fs-1: 30px;
         --fs-2: 20px;
         --fs-3: 18px;
-        --fs-4: 15px;        
+        --fs-4: 15px;
+        --fs-7: 10px;        
     }
 
     .container { max-width: 600px; }
@@ -391,6 +392,7 @@ header {
     .hero :is(.btn-primary, .btn-title, .btn-link) {--fs-4: 16px; margin-bottom: 0; }
     .hero-btn-group { display: flex; justify-content: center; align-items: center; gap: 25px; }
     .btn-link-wrapper { display: flex; justify-content: center; align-items: center; gap: 25px; }
+    .btn {font-size: var(--fs-7); }
 
     .podcast-list { grid-template-columns: 1fr 1fr; }    
 

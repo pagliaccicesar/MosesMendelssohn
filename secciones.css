@@ -500,7 +500,8 @@ header {
         --fs-1: 30px;
         --fs-2: 20px;
         --fs-3: 18px;
-        --fs-4: 15px;        
+        --fs-4: 15px;
+        --fs-7: 10px;        
     }
 
     .container { max-width: 600px; }
@@ -521,6 +522,8 @@ header {
     .footer-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 50px; }
     .footer-brand { max-width: 350px; margin-bottom: 0; }
     .footer-list { margin-bottom: 0; }
+    .btn {font-size: var(--fs-7);   
+}
     
 }
 

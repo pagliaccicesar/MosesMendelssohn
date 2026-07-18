@@ -343,6 +343,7 @@
     --fs-3: 17px;
     --fs-4: 10px;
     --fs-5: 12px;
+    --fs-7: 10px;
 
     --fw-500: 500;
     --fw-700: 700;
@@ -870,6 +871,7 @@ header {
     .hero :is(.btn-primary, .btn-title, .btn-link) {--fs-4: 16px; margin-bottom: 0; }
     .hero-btn-group { display: flex; justify-content: center; align-items: center; gap: 25px; }
     .btn-link-wrapper { display: flex; justify-content: center; align-items: center; gap: 25px; }
+    .btn {font-size: var(--fs-7); }
 
     .podcast-list { grid-template-columns: 1fr 1fr; }
 
