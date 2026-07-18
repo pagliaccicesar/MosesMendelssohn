@@ -20,6 +20,7 @@
     --fs-5: 12px;
     --fs-6: 15px;
     --fs-7: 13px;
+    --fs-8: 9px;
 
     --fw-500: 500;
     --fw-700: 700;
@@ -49,12 +50,12 @@ body { background-color: var(--dark-violet); color: var(--white); }
 .btn {
     background: var(--blue-ryb);
     color: var(--white);
-    font-size: var(--fs-4);
+    font-size: var(--fs-8);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    padding: 9px 10px;
+    padding: 5px 7px;
     border-radius: 4px;
 }
 
@@ -361,12 +362,15 @@ header {
 }
 @media(max-width: 549px) {
     .newsletter { padding: 15px 0; width: 95%; margin: 0 auto }
+    .hero-text {font-size: var(--fs-7); line-height: 1.2; max-width: 600px; padding-top: 16px; text-align: center;}
+    .scroll { padding-top: 15px; font-size: larger; color: var(--flourescent-blue);}
 }
 
 @media(min-width: 550px) {
     .container { max-width: 500px; margin-inline: auto;}
     .hero-caption{font-size: 10px; text-align:right;}
     .hero-cover-text {font-size: var(--fs-3); line-height: 1.2;}
+    .scroll { display: none;}
 }
 
 @media(min-width: 768px) {  
@@ -429,7 +433,9 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 }
 
 /* resto del sitio */
-
+.btn {    
+    font-size: var(--fs-7);   
+}
 .podcast-list{
     grid-template-columns:1fr 1fr;
 }
