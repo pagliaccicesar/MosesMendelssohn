@@ -140,8 +140,8 @@ header {
     flex-direction:column;
     align-items:center;
     text-align:center;
-    gap:10px;   /**30px*/
-    position:relative;
+    gap: 10px;   
+    position: relative;
 }
 
 .hero-title{
@@ -187,7 +187,7 @@ header {
     flex-direction:column;
     align-items:center;
     width:100%;
-    max-width:900px;
+    max-width: 900px;
     margin-inline:auto;
 }
 
@@ -669,26 +669,69 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     .navbar-actions .btn { margin-left: 20px; }
 
     /* HERO */
+   
     .hero-content{
         grid-template-columns: minmax(120px, 210px) minmax(320px, 980px) minmax(100px, 200px);
-        max-width:1600px;
+        
+        max-width: 1600px;
     }
 
-    .hero-text{
-        font-size:13px;
+    /*.hero-text{
+        /*font-size: 13px;
         text-align: center;
-        margin-left: 36px;
+        margin-left: 16px;
         padding: 5px;
-        line-height:1.3;       
-    }
+        line-height: 1.3;  
+        
+        
+        background:rgba(63, 38, 204, 0.22);
+        backdrop-filter: blur(2px);
+        border-radius:7px;      
+        box-shadow:0 18px 40px rgba(0,0,0,.35);
+    }*/
+    .hero-text{
 
-    .hero-cover-text{
-        font-size: 15px;
+    width:280px;
+    max-width:280px;
+
+    font-size:14px;
+    line-height:1.7;
+
+    padding:22px;
+
+    background:rgba(63,38,204,.22);
+
+    backdrop-filter:blur(3px);
+
+    border-radius:12px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+    position:relative;
+    top:120px;
+}
+
+    /*.hero-cover-text{
+        font-size: 13px;
         padding: 18px;
         text-align: center;
-        margin-bottom: 35px;
+        margin-left: -36px;
+        margin-bottom: 45px;
         font-weight: bold;        
-    }
+    }*/
+    .hero-cover-text{
+    font-size: 14px;
+    line-height: 1.7;
+    width: 280px;
+    max-width: 280px;
+    padding: 22px;
+    margin-left: -60px;
+    margin-bottom: 100px;
+    text-align: center;
+    /*background: rgba(63,38,204,.18);
+    backdrop-filter: blur(3px);
+    border-radius:12px;
+    box-shadow:0 18px 40px rgba(0,0,0,.35);*/
+}
 
     .footer-link-title { --fs-2: 22px; margin-bottom: 10px; }
     .social-title { margin-left: auto; margin-bottom: 35px; }
