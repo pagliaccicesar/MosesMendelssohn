@@ -707,7 +707,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 
     box-shadow:0 18px 40px rgba(0,0,0,.35);
     position:relative;
-    top:120px;
+    top:100px;
 }
 
     /*.hero-cover-text{
@@ -725,7 +725,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     max-width: 280px;
     padding: 22px;
     margin-left: -60px;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
     text-align: center;
     /*background: rgba(63,38,204,.18);
     backdrop-filter: blur(3px);
