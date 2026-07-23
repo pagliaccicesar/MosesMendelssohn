@@ -608,6 +608,49 @@ header {
 .card_donacion h3 {
     font-size: medium;
 }
+
+.popup-box-pay{
+    /*position:relative;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+
+    width:90%;
+    max-width:520px;
+    background:#101626;
+    color:#FFF;
+    padding:35px;
+    border-radius:12px;
+    border:2px solid #4fc3f7;
+    box-shadow:0 0 35px rgba(79,195,247,.35);
+    text-align: left;
+    animation:popup .35s ease;
+}
+
+.card_donacion_pay {
+    width: 20rem;
+    height: 9rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.9rem;
+    line-height: 1.2;
+    border: 1px solid;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 0 1px #ffffff;   
+    overflow: hidden;
+}
+.card_donacion_pay h3 {
+    font-size: small;
+}
+
+
+
+
+
 .arrow-btn, .arrow-btn-1 {
     flex-shrink: 0;
     width: 3.5rem;

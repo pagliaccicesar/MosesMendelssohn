@@ -47,7 +47,7 @@ window.addEventListener('scroll', function () {
 
 
 
-// js de popup de cuentas de donaciones
+// js de popup de cuentas de donaciones (nacional)
 
 const abrirPopup = document.getElementById("abrirPopup");
 const popup = document.getElementById("popupArgentina");
@@ -74,6 +74,37 @@ popup.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e)=>{
     if(e.key === "Escape"){
         popup.classList.remove("active");
+    }
+});
+
+
+// js de popup de cuentas de donaciones (exterior)
+
+const abrirPopupI = document.getElementById("abrirPopup-pay");
+const popupI = document.getElementById("popupArgentina-pay");
+const cerrarPopupI = document.getElementById("cerrarPopup-pay");
+
+// Abrir
+abrirPopupI.addEventListener("click", () => {
+    popupI.classList.add("active");
+});
+
+// Cerrar con X
+cerrarPopupI.addEventListener("click", () => {
+    popupI.classList.remove("active");
+});
+
+// Cerrar haciendo click fuera
+popupI.addEventListener("click", (e) => {
+    if(e.target === popupI){
+        popupI.classList.remove("active");
+    }
+
+});
+// Cerrar con Escape
+document.addEventListener("keydown", (e)=>{
+    if(e.key === "Escape"){
+        popupI.classList.remove("active");
     }
 });
 
