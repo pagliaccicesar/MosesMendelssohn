@@ -839,19 +839,33 @@ section.agenda { padding: var(--section-padding-2) 0; }
   color: #f5f5f5;
   font-family: inherit;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 @media (min-width: 40em) {
   .event .info .title {
-    font-size: 1.75em;
+    font-size: 1.35em;
   }
 }
 .event .info .desc {
   color: #f5f5f5;
   font-weight: 300;
+  margin-top: 7px;
   margin-bottom: 0;
+  text-align: left;
 }
-
+@media (max-width: 39em) {
+  .event .info .title {
+    font-size: 0.9em;
+  
+}
+.event .info .desc {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--flourescent-blue);
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: right;
+}}
 
 /* MOBILE */
 .video-wrapper{
