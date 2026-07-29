@@ -16,7 +16,6 @@ for(let i = 0; i < navElemArr.length; i++) {
 }
 
 // Header sticky
-
 const headerElem = document.querySelector('[data-header]');
 let lastScrollPosition = 0;
 
@@ -31,24 +30,50 @@ window.addEventListener('scroll', function () {
 
 // Form validation
 
-const input = document.querySelector('[data-input]');
-const submitBtn = document.querySelector('[data-submit]');
+document
+.getElementById("newsletterForm")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = this.email.value;
 
-input.addEventListener('input', function () {
-    if(input.checkValidity()) { submitBtn.removeAttribute('disabled'); } else { submitBtn.setAttribute('disabled', ''); }
+    fetch("newsletter.php",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
+        },
+        body:"email="+encodeURIComponent(email)
+    })
+    .then(r=>r.text())
+    .then(res=>{
+        alert("¡Gracias! En breve nos contactamos.");
+        document
+        .getElementById("newsletterForm")
+        .reset();
+    })
+
+    .catch(err=>{
+        alert("Error al enviar.");
+    });
 });
 
+
+
+
+
+
+
+
+
+
+
 // Go top
-
 const goTopBtn = document.querySelector('[data-go-top]');
-
 window.addEventListener('scroll', function () {
     window.scrollY > 200 ? goTopBtn.classList.add('active') : goTopBtn.classList.remove('active');
 });
 
 
 // Fotos de Fotografias
-
 const popup = document.getElementById("imagePopup");
 const popupImg = document.getElementById("popupImage");
 const closePopup = document.querySelector(".popup-close");
