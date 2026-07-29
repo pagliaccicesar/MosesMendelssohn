@@ -763,30 +763,80 @@ section.agenda { padding: var(--section-padding-2) 0; }
     text-shadow: 0 0 12px rgba(149, 249, 246, 0.35);
 
 }
-.event-list {
-  /*font-family: 'Public Sans', sans-serif;*/
+.event-list { 
   list-style: none;
   margin: 0 0 1em;
 }
-.event {
+/*.event {
   background-color: var(--background-2);
   margin-bottom: 1em;
   min-height: 120px;
-}
+}*/
 .event .date {
   background-color: black;  
   line-height: 1;
   padding: 0 32px 1px;
 }
+
+
+
+
+
+
+.speaker{
+    flex-shrink:0;
+}
+.speaker img{
+    width:95px;
+    height:95px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid var(--flourescent-blue);
+    box-shadow:0 8px 18px rgba(0,0,0,.35);
+}
+
+.event{
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    background:var(--background-2);
+    padding:18px;
+    border-radius:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 40em) {
-  .event .date {
+  /*.event .date {
     float: left;
     height: 120px;
     margin-right: -120px;
     text-align: center;
     text-transform: uppercase;
     width: 120px;
-  }
+  }*/
+
+  .event .date{
+    width:100px;
+    text-align:center;
+    background:black;
+    padding:12px 0;
+    border-radius:8px;
+    flex-shrink:0;
+}
+
+
+
+
 }
 .event .date a {
   color: inherit;
@@ -797,6 +847,9 @@ section.agenda { padding: var(--section-padding-2) 0; }
   margin-right: 5px;
 }
 @media (min-width: 40em) {
+    .event {
+        margin-bottom: 10px;
+    }
   .event .date span {
     display: block;
   }
@@ -830,20 +883,22 @@ section.agenda { padding: var(--section-padding-2) 0; }
   color: #f5f5f5;
   padding: 6px 12px;
 }
-@media (min-width: 40em) {
+@media (min-width: 40em) {    
   .event .info {
-    margin-left: 120px;
+    flex:1;
+    color:#fff;
+    /*margin-left: 120px;*/
   }
 }
 .event .info .title {
   color: #f5f5f5;
   font-family: inherit;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 @media (min-width: 40em) {
   .event .info .title {
-    font-size: 1.35em;
+    font-size: 1.25em;
   }
 }
 .event .info .desc {
@@ -854,9 +909,11 @@ section.agenda { padding: var(--section-padding-2) 0; }
   text-align: left;
 }
 @media (max-width: 39em) {
+    .event {
+        margin-bottom: 10px;
+    }
   .event .info .title {
-    font-size: 0.9em;
-  
+    font-size: 0.6em;  
 }
 .event .info .desc {
   font-size: 0.8em;
@@ -864,7 +921,7 @@ section.agenda { padding: var(--section-padding-2) 0; }
   color: var(--flourescent-blue);
   margin-top: 10px;
   margin-bottom: 0;
-  text-align: right;
+  text-align: left;
 }}
 
 /* MOBILE */
