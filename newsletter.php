@@ -16,7 +16,7 @@ $mail->isSMTP();
 $mail->Host="smtp.hostinger.com";
 $mail->SMTPAuth=true;
 $mail->Username="info@mendelssohn.com.ar";
-$mail->Password="TU_PASSWORD";
+$mail->Password="Moses--2080";
 $mail->SMTPSecure="tls";
 $mail->Port=587;
 $mail->setFrom("info@asociacionmendelssohn.com.ar","Newsletter");
