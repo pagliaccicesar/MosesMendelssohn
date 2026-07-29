@@ -799,19 +799,10 @@ section.agenda { padding: var(--section-padding-2) 0; }
     display:flex;
     align-items:center;
     gap:25px;
-
     background:var(--background-2);
     padding:18px;
     border-radius:10px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -909,10 +900,25 @@ section.agenda { padding: var(--section-padding-2) 0; }
   text-align: left;
 }
 @media (max-width: 39em) {
-    .event {
-        margin-bottom: 10px;
-    }
-  .event .info .title {
+.event {
+     margin-bottom: 10px;
+}
+.event .date{
+    width:50px;
+    text-align:center;
+    background:black;
+    padding:12px 3px;
+}
+.event .date .year,
+.event .date .time {
+    font-size: 0.7em;
+    font-weight: 200;
+}
+.event .date .month {
+    font-size: 0.9em;
+}
+
+.event .info .title {
     font-size: 0.6em;  
 }
 .event .info .desc {
