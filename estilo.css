@@ -291,7 +291,7 @@ header {
     border-radius:8px;
     opacity:0;
     transition:.4s;
-    z-index:9999;
+    z-index: 3;   
 }
 .popup-newsletter.show{
     opacity:1;

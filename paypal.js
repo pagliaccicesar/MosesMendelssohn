@@ -55,44 +55,30 @@ crearBoton(
 );
 
 
-/*
-function crearBoton(planId, contenedor) {
-    paypal.Buttons({
-        style: {
-            shape: "rect",
-            color: "gold",
-            layout: "vertical",
-            label: "subscribe"
+// Form validation
+
+document
+.getElementById("newsletterForm")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = this.email.value;
+
+    fetch("newsletter.php",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
         },
-        createSubscription(data, actions) {
-            return actions.subscription.create({
-                plan_id: planId
-            });
-        },
-        onApprove(data) {
-            alert("¡Muchas gracias por tu donación!");
-            console.log("Suscripción:", data.subscriptionID);
-        },
-        onError(err) {
-            console.error(err);
-            alert("Ocurrió un error al conectar con PayPal.");
-        }
+        body:"email="+encodeURIComponent(email)
+    })
+    .then(r=>r.text())
+    .then(res=>{
+        alert("¡Gracias! En breve nos contactamos.");
+        document
+        .getElementById("newsletterForm")
+        .reset();
+    })
 
-    }).render(contenedor);
-}
-
-crearBoton(
-    "P-9JD8514570182411TNIYX6TA",
-    "#paypal-5"
-);
-
-crearBoton(
-    "P-7FA657752S951364RNIYX7SA",
-    "#paypal-10"
-);
-
-crearBoton(
-    "P-1KD33679JY168532FNIY3FXY",
-    "#paypal-15"
-);*/
-
+    .catch(err=>{
+        alert("Error al enviar.");
+    });
+});

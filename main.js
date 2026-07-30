@@ -28,42 +28,6 @@ window.addEventListener('scroll', function () {
     
 });
 
-// Form validation
-
-document
-.getElementById("newsletterForm")
-.addEventListener("submit", function(e){
-    e.preventDefault();
-    const email = this.email.value;
-
-    fetch("newsletter.php",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded"
-        },
-        body:"email="+encodeURIComponent(email)
-    })
-    .then(r=>r.text())
-    .then(res=>{
-        alert("¡Gracias! En breve nos contactamos.");
-        document
-        .getElementById("newsletterForm")
-        .reset();
-    })
-
-    .catch(err=>{
-        alert("Error al enviar.");
-    });
-});
-
-
-
-
-
-
-
-
-
 
 
 // Go top
@@ -102,6 +66,35 @@ document.addEventListener("keydown",(e)=>{
     if(e.key==="Escape"){
         popup.classList.remove("active");
     }
+});
+
+
+// Form validation
+
+document
+.getElementById("newsletterForm")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = this.email.value;
+
+    fetch("newsletter.php",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
+        },
+        body:"email="+encodeURIComponent(email)
+    })
+    .then(r=>r.text())
+    .then(res=>{
+        alert("¡Gracias! En breve nos contactamos.");
+        document
+        .getElementById("newsletterForm")
+        .reset();
+    })
+
+    .catch(err=>{
+        alert("Error al enviar.");
+    });
 });
 
 

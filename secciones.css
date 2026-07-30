@@ -424,6 +424,20 @@ header {
 
 .newsletter-card .btn-primary { font-size: var(--fs-3); width: 100%; padding-block: 18px;}
 .newsletter-card .btn-primary:disabled { cursor: not-allowed; background-position: right; }
+.popup-newsletter{
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:#4CAF50;
+    color:white;
+    padding:18px 30px;
+    border-radius:8px;
+    opacity:0;
+    transition:.4s;       
+}
+.popup-newsletter.show{
+    opacity:1;
+}
 
 /*FOOTER*/
 
