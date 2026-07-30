@@ -773,37 +773,6 @@ header {
     }
 }
 
-/*.cuentas-titulo { display: flex; align-items: center; justify-content: space-between; gap: 100px; }
-.cuentas-paypal { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
-.cuentas-banco { width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
-.datos-bancarios{
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 2px solid #ffffff;
-    border-radius: 16px;
-    background-color: rgba(255,255,255,.03);
-    color: #ffffff;
-    line-height: 1.2;
-    box-shadow: 0 0 20px rgba(255,255,255,.08);
-}
-.datos-bancarios h3{
-    text-align: center;
-    color: #00f9ef;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-.datos-bancarios p{
-    margin-bottom: .8rem;
-}
-.datos-bancarios strong{
-    color: #ffffff;
-}
-.aclaracion{        
-    font-style: italic;
-    color: #ccc;
-}*/
 
 /*NEWSLETTER*/
 
