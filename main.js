@@ -36,24 +36,27 @@ document
     e.preventDefault();
     const email = this.email.value;
 
-    fetch("newsletter.php",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded"
-        },
-        body:"email="+encodeURIComponent(email)
-    })
-    .then(r=>r.text())
-    .then(res=>{
-        alert("¡Gracias! En breve nos contactamos.");
-        document
-        .getElementById("newsletterForm")
-        .reset();
-    })
-
-    .catch(err=>{
-        alert("Error al enviar.");
-    });
+    fetch("newsletter.php", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: "email=" + encodeURIComponent(email)
+        })
+        .then(response => response.text())
+        .then(res => {
+            if (res.trim() === "OK") {
+                alert("¡Gracias! En breve nos contactamos.");
+                document.getElementById("newsletterForm").reset();
+            } else {
+                console.error(res);
+                alert("Hubo un problema al enviar tu email.");
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Error al enviar.");
+        });
 });
 
 
