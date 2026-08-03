@@ -31,7 +31,9 @@ window.addEventListener('scroll', function () {
 // Form validation
 
 document
+
 .getElementById("newsletterForm")
+
 .addEventListener("submit", function(e){
     e.preventDefault();
     const email = this.email.value;
