@@ -89,6 +89,9 @@
     color: var(--text-primary);
     max-width: 100%;    
   }
+  #somos-historia {
+    text-align: justify;
+  }
 
   .section-list {
     text-align: left;    
