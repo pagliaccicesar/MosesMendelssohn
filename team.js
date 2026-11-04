@@ -1,113 +1,135 @@
-//  equipo
+// Tarjetas del equipo
+
 const cardControllers = document.querySelectorAll("[data-card-controller]");
 
 cardControllers.forEach(controller => {
-  controller.addEventListener("click", (e) => {
-    const card = e.currentTarget.parentElement.parentElement;
-    const isVisible = card.dataset.visible;
 
-    if (isVisible === "false") {
-      card.setAttribute("data-visible", true);
-    } else {
-      card.setAttribute("data-visible", false);
-    }
-  })
-})
+    controller.addEventListener("click", (e) => {
 
+        const card = e.currentTarget.parentElement.parentElement;
 
-//  probando menu
-'use strict';
+        card.dataset.visible =
+            card.dataset.visible === "true" ? "false" : "true";
 
-const elemToggleFunc = function (elem) { elem.classList.toggle('active'); }
-
-const navbar = document.querySelector('[data-navbar]');
-const overlay = document.querySelector('[data-overlay]');
-const navToggleBtn = document.querySelector('[data-nav-toggle-btn]');
-
-const navElemArr = [overlay, navToggleBtn];
-
-for(let i = 0; i < navElemArr.length; i++) {
-    navElemArr[i].addEventListener('click', function () {
-        elemToggleFunc(navbar);
-        elemToggleFunc(overlay);
     });
-}
-// Header sticky  probando menu
-const headerElem = document.querySelector('[data-header]');
-let lastScrollPosition = 0;
 
-window.addEventListener('scroll', function () {
-    let scrollPosition = window.pageYOffset;
-
-    if(scrollPosition > lastScrollPosition) { headerElem.classList.remove('active'); } else { headerElem.classList.add('active'); }
-
-    lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
-    
 });
 
 
-
-// js de popup de cuentas de donaciones (nacional)
+// Popup Donaciones
 
 const abrirPopup = document.getElementById("abrirPopup");
 const popup = document.getElementById("popupArgentina");
 const cerrarPopup = document.getElementById("cerrarPopup");
 
-// Abrir
-abrirPopup.addEventListener("click", () => {
-    popup.classList.add("active");
-});
+if (abrirPopup && popup && cerrarPopup) {
 
-// Cerrar con X
-cerrarPopup.addEventListener("click", () => {
-    popup.classList.remove("active");
-});
+    abrirPopup.addEventListener("click", () => {
+        popup.classList.add("active");
+    });
 
-// Cerrar haciendo click fuera
-popup.addEventListener("click", (e) => {
-    if(e.target === popup){
+    cerrarPopup.addEventListener("click", () => {
         popup.classList.remove("active");
-    }
+    });
 
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            popup.classList.remove("active");
+        }
+    });
+
+}
+
+
+// de paypal
+function crearBoton(planId, contenedor){
+
+    if(!document.querySelector(contenedor)) return;
+
+    paypal.Buttons({
+
+        style:{
+            shape:"rect",
+            color:"gold",
+            layout:"vertical",
+            label:"subscribe"
+        },
+
+        createSubscription(data, actions){
+
+            return actions.subscription.create({
+                plan_id: planId
+            });
+
+        },
+
+        onApprove(data){
+
+            alert("¡Muchas gracias por colaborar con la Asociación!");
+
+            console.log("ID:", data.subscriptionID);
+
+        },
+
+        onError(err){
+
+            console.error(err);
+
+            alert("No fue posible iniciar la suscripción.");
+
+        }
+
+    }).render(contenedor);
+
+}
+
+crearBoton(
+    "P-9JD8514570182411TNIYX6TA",
+    "#paypal-5"
+);
+
+crearBoton(
+    "P-7FA657752S951364RNIYX7SA",
+    "#paypal-10"
+);
+
+crearBoton(
+    "P-1KD33679JY168532FNIY3FXY",
+    "#paypal-15"
+);
+
+
+// Form validation
+
+document
+.getElementById("newsletterForm")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = this.email.value;
+
+    fetch("newsletter.php",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
+        },
+        body:"email="+encodeURIComponent(email)
+    })
+    .then(r=>r.text())
+    .then(res=>{
+        alert("¡Gracias! En breve nos contactamos.");
+        document
+        .getElementById("newsletterForm")
+        .reset();
+    })
+
+    .catch(err=>{
+        alert("Error al enviar.");
+    });
 });
-// Cerrar con Escape
-document.addEventListener("keydown", (e)=>{
-    if(e.key === "Escape"){
-        popup.classList.remove("active");
-    }
-});
-
-
-// js de popup de cuentas de donaciones (exterior)
-
-const abrirPopupI = document.getElementById("abrirPopup-pay");
-const popupI = document.getElementById("popupArgentina-pay");
-const cerrarPopupI = document.getElementById("cerrarPopup-pay");
-
-// Abrir
-abrirPopupI.addEventListener("click", () => {
-    popupI.classList.add("active");
-});
-
-// Cerrar con X
-cerrarPopupI.addEventListener("click", () => {
-    popupI.classList.remove("active");
-});
-
-// Cerrar haciendo click fuera
-popupI.addEventListener("click", (e) => {
-    if(e.target === popupI){
-        popupI.classList.remove("active");
-    }
-
-});
-// Cerrar con Escape
-document.addEventListener("keydown", (e)=>{
-    if(e.key === "Escape"){
-        popupI.classList.remove("active");
-    }
-});
-
-
-
 

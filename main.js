@@ -1,122 +1,162 @@
 'use strict';
 
-const elemToggleFunc = function (elem) { elem.classList.toggle('active'); }
+/* ===============================
+   Función auxiliar
+================================= */
+const elemToggleFunc = (elem) => {
+    if (elem) elem.classList.toggle("active");
+};
 
-const navbar = document.querySelector('[data-navbar]');
-const overlay = document.querySelector('[data-overlay]');
-const navToggleBtn = document.querySelector('[data-nav-toggle-btn]');
+/* ===============================
+   Menú Responsive
+================================= */
+const navbar = document.querySelector("[data-navbar]");
+const overlay = document.querySelector("[data-overlay]");
+const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 
-const navElemArr = [overlay, navToggleBtn];
+if (navbar && overlay && navToggleBtn) {
 
-for(let i = 0; i < navElemArr.length; i++) {
-    navElemArr[i].addEventListener('click', function () {
-        elemToggleFunc(navbar);
-        elemToggleFunc(overlay);
+    const navElemArr = [overlay, navToggleBtn];
+
+    navElemArr.forEach(elem => {
+        elem.addEventListener("click", () => {
+            elemToggleFunc(navbar);
+            elemToggleFunc(overlay);
+        });
     });
+
 }
 
-// Header sticky
-const headerElem = document.querySelector('[data-header]');
-let lastScrollPosition = 0;
+/* ===============================
+   Header Sticky
+================================= */
+const headerElem = document.querySelector("[data-header]");
 
-window.addEventListener('scroll', function () {
-    let scrollPosition = window.pageYOffset;
+if (headerElem) {
 
-    if(scrollPosition > lastScrollPosition) { headerElem.classList.remove('active'); } else { headerElem.classList.add('active'); }
+    let lastScrollPosition = 0;
 
-    lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
-    
-});
+    window.addEventListener("scroll", () => {
 
-// Form validation
+        const scrollPosition = window.pageYOffset;
 
-document
+        if (scrollPosition > lastScrollPosition) {
+            headerElem.classList.remove("active");
+        } else {
+            headerElem.classList.add("active");
+        }
 
-.getElementById("newsletterForm")
+        lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
 
-.addEventListener("submit", function(e){
-    e.preventDefault();
-    const email = this.email.value;
+    });
 
-    fetch("newsletter.php", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-    },
-    body: "email=" + encodeURIComponent(email)
+}
+
+/* ===============================
+   Newsletter
+================================= */
+const newsletterForm = document.getElementById("newsletterForm");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = this.email.value;
+
+        fetch("newsletter.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "email=" + encodeURIComponent(email)
         })
         .then(response => response.text())
         .then(res => {
+
             if (res.trim() === "OK") {
+
                 alert("¡Gracias! En breve nos contactamos.");
-                document.getElementById("newsletterForm").reset();
+                newsletterForm.reset();
+
             } else {
-                console.error(res);
-                alert("Hubo un problema al enviar tu email.");
+
+                alert("Error: " + res);
+
             }
+
         })
-        .catch(err => {
-            console.error(err);
-            alert("Error al enviar.");
+        .catch(error => {
+
+            console.error(error);
+            alert("No fue posible enviar el formulario.");
+
         });
-});
 
+    });
 
+}
 
+/* ===============================
+   Botón Ir Arriba
+================================= */
+const goTopBtn = document.querySelector("[data-go-top]");
 
+if (goTopBtn) {
 
+    window.addEventListener("scroll", () => {
 
+        if (window.scrollY > 200) {
+            goTopBtn.classList.add("active");
+        } else {
+            goTopBtn.classList.remove("active");
+        }
 
-// Go top
-const goTopBtn = document.querySelector('[data-go-top]');
-window.addEventListener('scroll', function () {
-    window.scrollY > 200 ? goTopBtn.classList.add('active') : goTopBtn.classList.remove('active');
-});
+    });
 
+}
 
-// Fotos de Fotografias
+/* ===============================
+   Popup Fotografías
+================================= */
 const popup = document.getElementById("imagePopup");
 const popupImg = document.getElementById("popupImage");
 const closePopup = document.querySelector(".popup-close");
 
-document.querySelectorAll(".podcast-card").forEach(card => {
-    card.addEventListener("click", function(e){
-        e.preventDefault();
-        const img = this.querySelector("img");
-        popupImg.src = img.src;
-        popupImg.alt = img.alt;
-        popup.classList.add("active");
+if (popup && popupImg && closePopup) {
+
+    document.querySelectorAll(".podcast-card").forEach(card => {
+
+        card.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const img = this.querySelector("img");
+
+            popupImg.src = img.src;
+            popupImg.alt = img.alt;
+
+            popup.classList.add("active");
+
+        });
+
     });
-});
 
-closePopup.addEventListener("click", ()=>{
-    popup.classList.remove("active");
-});
-
-popup.addEventListener("click",(e)=>{
-    if(e.target===popup){
+    closePopup.addEventListener("click", () => {
         popup.classList.remove("active");
-    }
-});
+    });
 
-document.addEventListener("keydown",(e)=>{
-    if(e.key==="Escape"){
-        popup.classList.remove("active");
-    }
-});
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+        }
+    });
 
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            popup.classList.remove("active");
+        }
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
