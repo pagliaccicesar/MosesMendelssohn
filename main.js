@@ -52,51 +52,102 @@ if (headerElem) {
 
 }
 
+
+
 /* ===============================
-   Newsletter
+   Newsletter + Google reCAPTCHA v3
 ================================= */
+
+
+
+/* ===============================
+   Newsletter + Google reCAPTCHA v3
+================================= */
+
 const newsletterForm = document.getElementById("newsletterForm");
 
 if (newsletterForm) {
 
-    newsletterForm.addEventListener("submit", function (e) {
+    const SITE_KEY = "6Ld8ORcuAAAAAPB3xmLJq6Iip_EzW8ntVLE01ePD";
+
+    newsletterForm.addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
-        const email = this.email.value;
+        const nombre = this.nombre.value.trim();
+        const apellido = this.apellido.value.trim();
+        const email = this.email.value.trim();
 
-        fetch("newsletter.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: "email=" + encodeURIComponent(email)
-        })
-        .then(response => response.text())
-        .then(res => {
+        const submitButton = this.querySelector('button[type="submit"]');
 
-            if (res.trim() === "OK") {
+        submitButton.disabled = true;
 
-                alert("¡Gracias! En breve nos contactamos.");
+        try {
+
+            // Obtener token de Google reCAPTCHA v3
+            const token = await new Promise((resolve, reject) => {
+
+                grecaptcha.ready(() => {
+
+                    grecaptcha.execute(SITE_KEY, {
+                        action: "newsletter"
+                    })
+                    .then(resolve)
+                    .catch(reject);
+
+                });
+
+            });
+
+            // Preparar los datos
+            const datos = new URLSearchParams();
+
+            datos.append("nombre", nombre);
+            datos.append("apellido", apellido);
+            datos.append("email", email);
+            datos.append("recaptcha_token", token);
+
+            // Enviar a PHP
+            const response = await fetch("newsletter.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: datos.toString()
+            });
+
+            const resultado = (await response.text()).trim();
+
+            if (response.ok && resultado === "OK") {
+
+                alert("¡Gracias por suscribirte! En breve recibirás nuestras novedades.");
+
                 newsletterForm.reset();
 
             } else {
 
-                alert("Error: " + res);
+                alert("No fue posible completar la suscripción. Intentá nuevamente.");
 
             }
 
-        })
-        .catch(error => {
+        } catch (error) {
 
-            console.error(error);
-            alert("No fue posible enviar el formulario.");
+            console.error("Error en Newsletter:", error);
 
-        });
+            alert("Ocurrió un error de conexión. Intentá nuevamente.");
+
+        } finally {
+
+            submitButton.disabled = false;
+
+        }
 
     });
 
 }
+
+
+
 
 /* ===============================
    Botón Ir Arriba

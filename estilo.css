@@ -296,6 +296,25 @@ header {
     opacity:1;
 }
 
+/* ===============================
+   Google reCAPTCHA v3
+================================= */
+
+
+/* ===============================
+   Google reCAPTCHA v3 - Newsletter
+================================= */
+
+.grecaptcha-badge {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 15px auto 0 !important;
+    z-index: 10 !important;
+}
+
+
+
 /*FOOTER*/
 
 .footer-top { padding: var(--section-padding) 0; border-bottom: 1px solid var(--space-cadet); }
@@ -445,7 +464,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     padding:30px;
 }
 .newsletter-card .btn-primary{
-    position:absolute;
+    /*position:absolute;*/
     top:4px;
     right:4px;
     bottom:4px;
@@ -455,8 +474,30 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     padding-right:155px;
 }
 .card-form{
-    position:relative;
+    /*position:relative;*/    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
+.card-form .input-field {
+    width: 100%;
+}
+
+/* ===============================
+   Google reCAPTCHA v3 - Newsletter
+================================= */
+
+.grecaptcha-badge {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 15px auto 0 !important;
+    z-index: 10 !important;
+}
+
+
+
+
 .footer-top .container{
     display:flex;
     justify-content:space-between;
@@ -648,6 +689,20 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
         border-radius:12px;
         box-shadow:0 18px 40px rgba(0,0,0,.35);
     }
+
+    
+/* ===============================
+   Google reCAPTCHA v3 - Newsletter
+================================= */
+
+.grecaptcha-badge {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 15px auto 0 !important;
+    z-index: 10 !important;
+}
+
 }
 
 @media(min-width: 1300px) {
@@ -704,6 +759,20 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
     .footer-link-title { --fs-2: 22px; margin-bottom: 10px; }
     .social-title { margin-left: auto; margin-bottom: 35px; }
     .social-link { width: 45px; height: 45px; font-size: 22px;}
+
+    
+/* ===============================
+   Google reCAPTCHA v3 - Newsletter
+================================= */
+
+.newsletter .grecaptcha-badge {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin: 15px auto 0 !important;
+    z-index: 10 !important;
+}
+
 }
 
 

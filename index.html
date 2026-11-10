@@ -88,11 +88,7 @@
                                     <iframe width="260" height="157" src="https://www.youtube.com/embed/sGIjM_HfrHY?si=r28AtsiUTvtbKoRw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>    
                             </figure>                            
-                            <div class="card-content">
-                                <!--<div class="card-meta">
-                                    <time datetime="2026-08-02">02 Ago, 2026</time>
-                                    <p class="pod-epi">Prof. Silvana Greco</p>
-                                </div>-->
+                            <div class="card-content">                                
                                 <h3 class="h3 card-title">-Conferencia "Avre tu puerta cerrada: una exploración poética y musical de la imagen de la puerta desde la poesía hebrea de Sefarad a los romances judeo-españoles y el rock israelí".<br> A cargo del Dr. Ronnie Perelis (Yeshiva University - New York) realizada el 2 de agosto de 2026</h3>
                             </div>
                         </a>
@@ -105,11 +101,7 @@
                                     <iframe width="260" height="157" src="https://www.youtube.com/embed/6KTEaaZ-KDQ?si=e3YrhcJCQHZccrll&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>    
                             </figure>                            
-                            <div class="card-content">
-                                <!--<div class="card-meta">
-                                    <time datetime="2026-07-16">16 Jul, 2026</time>
-                                    <p class="pod-epi"> Dr. Daniel Strum</p>
-                                </div>-->
+                            <div class="card-content">                                
                                 <h3 class="h3 card-title">-Conferencia "Leo Strauss y el judaísmo alemán a principios del siglo XX".<br> A cargo del Dr. Carlo Altini (Università di Modena e Reggio Emilia) realizada el 16 de julio de 2026</h3>
                             </div>
                         </a>
@@ -122,15 +114,11 @@
                                     <iframe width="260" height="157" src="https://www.youtube.com/embed/sOcYhzVGafU?si=Xwlxh2ACm0XAdNUe&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>    
                             </figure>                            
-                            <div class="card-content">
-                                <!--<div class="card-meta">
-                                    <time datetime="2026-06-14">14 Jun, 2026</time>
-                                    <p class="pod-epi">Dr. Alan Verskin</p>
-                                </div>-->
+                            <div class="card-content">                                
                                 <h3 class="h3 card-title">-Conferencia "Musica y pensamiento judío en el Renacimento y el Barroco italiano".<br> A cargo del Dr. Piergabriele Mancuso (Medici Archive Project. Firenze) realizada el 14 de junio de 2026 </h3>
                             </div>
                         </a>
-                    </li>                    
+                    </li>
 
                                     
                 </ul>
@@ -141,8 +129,8 @@
                         <div class="row">
                         <div class="small-12 columns">
                             <h2 class="widget-title">Próximos Eventos</h2>
-                            <ul class="event-list">
-                                
+                            <ul class="event-list">                               
+
                                 <li class="event">
                                     <div class="date">
                                         <time datetime="2026-10-25">
@@ -206,21 +194,64 @@
 
             </section>
 
+            
+
+            
+            
             <section class="newsletter">
                 <div class="newsletter-card">
+
                     <div class="card-content">
-                        <h3 class="h3 card-title">Dejanos tu email y recibí todas las novedades</h3>
+                        <h3 class="h3 card-title">
+                            Dejanos tus datos y recibí todas las novedades
+                        </h3>
                     </div>
-                   
+
                     <form id="newsletterForm" action="newsletter.php" method="POST" class="card-form">
-                        <input type="email" name="email" placeholder="Ingresa tu email" required class="input-field" data-input>
-                        <button type="submit" class="btn btn-primary">Suscribite</button>
+
+                        <input
+                            type="text"
+                            name="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <input
+                            type="text"
+                            name="apellido"
+                            placeholder="Ingresa tu apellido"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Ingresa tu email"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <button type="submit" class="btn btn-primary">
+                            Suscribite
+                        </button>
+                        <div id="recaptchaBadgeContainer"></div>    
+                        
+                        
                     </form>
+
                     <div id="popupNewsletter" class="popup-newsletter">
-                        ¡Gracias! En breve nos contactamos.
+                        ¡Gracias por suscribirte! En breve recibirás nuestras novedades.
                     </div>
+
                 </div>
             </section>
+
+
 
         </article>
     </main>
@@ -271,6 +302,11 @@
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld8ORcuAAAAAPB3xmLJq6Iip_EzW8ntVLE01ePD"></script>
+  
+
+    
     <script src="./main.js"></script>
 </body>
 </html>
