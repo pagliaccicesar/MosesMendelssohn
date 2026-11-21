@@ -305,9 +305,9 @@ header {
 
 .grecaptcha-badge {
     position: relative !important;
-    bottom: auto !important;
+    bottom: 20px !important;
     right: auto !important;
-    margin: 15px auto 0 !important;
+    margin: 15px auto 20px !important;
     z-index: 10 !important;
 }
 
@@ -402,6 +402,7 @@ header {
     .hero-caption{font-size: 10px; text-align:right;}
     .hero-cover-text {font-size: var(--fs-3); line-height: 1.2;}
     .scroll { display: none;}
+    
 }
 
 @media(min-width: 768px) {  
@@ -487,7 +488,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 
 .grecaptcha-badge {
     position: relative !important;
-    bottom: auto !important;
+    bottom: 20px !important;
     right: auto !important;
     margin: 15px auto 0 !important;
     z-index: 10 !important;
@@ -695,7 +696,7 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 
 .grecaptcha-badge {
     position: relative !important;
-    bottom: auto !important;
+    bottom: 20px !important;
     right: auto !important;
     margin: 15px auto 0 !important;
     z-index: 10 !important;
@@ -765,9 +766,9 @@ HERO (stack vertical real, se mantiene asi hasta los 1089px)
 
 .newsletter .grecaptcha-badge {
     position: relative !important;
-    bottom: auto !important;
+    bottom: 20px !important;
     right: auto !important;
-    margin: 15px auto 0 !important;
+    margin: 150px auto  !important;
     z-index: 10 !important;
 }
 

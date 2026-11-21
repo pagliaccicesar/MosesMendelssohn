@@ -795,7 +795,7 @@ header {
 
     .newsletter-card .btn-primary { font-size: var(--fs-3); width: 100%; padding-block: 18px;}
     .newsletter-card .btn-primary:disabled { cursor: not-allowed; background-position: right; }
-    .popup-newsletter{
+    /*.popup-newsletter{
         position:fixed;
         top:30px;
         right:30px;
@@ -809,6 +809,94 @@ header {
 }
 .popup-newsletter.show{
     opacity:1;
+}*/
+/* NEWSLETTER */
+
+.newsletter {
+    padding: var(--section-padding-newsletter) 0;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.newsletter-card {
+    background: url('./img/fondo_news.png') no-repeat center / cover;
+    padding: 60px 30px;
+    border-radius: 12px;
+}
+
+.newsletter-card .card-title {
+    font-size: var(--fs-1);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.newsletter-card .card-text {
+    font-size: var(--fs-5);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* CAMPOS DEL FORMULARIO */
+
+.newsletter-card .input-field {
+    display: block;
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: var(--fs-4);
+    border: 1px solid white;
+}
+
+.newsletter-card .input-field::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.newsletter-card .input-field:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.38);
+}
+
+/* BOTÓN */
+
+.newsletter-card .btn-primary {
+    position: static;
+    display: inline-flex;
+    width: auto;
+    padding: 15px 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: var(--blue-ryb);
+    font-size: var(--fs-3);
+}
+
+.newsletter-card .btn-primary:hover {
+    background: #0045dc;
+}
+
+/* MENSAJE DE CONFIRMACIÓN */
+
+.popup-newsletter {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #4CAF50;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .4s;
+    z-index: 9999;
+}
+
+.popup-newsletter.show {
+    opacity: 1;
 }
 
 /*FOOTER*/
@@ -899,10 +987,13 @@ header {
 
     .podcast-list { grid-template-columns: 1fr 1fr; }
 
-    .newsletter-card { padding: 50px; }
+    /*.newsletter-card { padding: 50px; }
     .newsletter-card .btn-primary { position: absolute; top: 4px; right: 4px; bottom: 4px; width: 140px; }
     .newsletter-card .input-field { padding-right: 155px; }
-    .card-form { position: relative; }
+    .card-form { position: relative; }*/
+    .newsletter-card { padding: 50px; }
+    .newsletter-card .btn-primary {position: absolute; top: 4px; right: 4px; bottom: 4px; width: 140px;}
+    .newsletter-card .input-field {padding-right: 155px;}
 
     .footer-top .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 50px; }
     .footer-brand { max-width: 350px; margin-bottom: 0; }
@@ -963,9 +1054,13 @@ header {
 
     .podcast-list { grid-template-columns: repeat(3, 1fr); }
 
-    .newsletter-card { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
-        .newsletter-card .card-content, .card-form { width: 50%; }
-        .newsletter-card .card-text, .newsletter-card .input-field { margin-bottom: 0; }
+    /*.newsletter-card { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+    .newsletter-card .card-content, .card-form { width: 50%; }
+    .newsletter-card .card-text, .newsletter-card .input-field { margin-bottom: 0; }*/
+    .newsletter-card {display: flex; align-items: center; justify-content: space-between; gap: 50px; padding: 30px;}
+    .newsletter-card .card-content,.newsletter-card .card-form {width: 50%;}
+    .newsletter-card .card-content {margin-bottom: 0;}
+    .newsletter-card .card-form {position: relative;}
 }
 
 @media(min-width: 1200px) {
@@ -1026,16 +1121,46 @@ header {
 }
 
 @media (max-width: 500px){
-
     .card-banner{
         padding-inline: 10px;
     }
-
     .video-wrapper{
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
+}
+
+/* CORRECCIÓN DEL BOTÓN NEWSLETTER */
+
+@media (min-width: 768px) {
+
+    .newsletter-card .card-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+        width: 50%;
+    }
+
+    .newsletter-card .input-field {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 12px;
+    }
+
+    .newsletter-card .btn-primary {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        display: inline-flex;
+        width: auto !important;
+        align-self: flex-start;
+        margin: 0;
+        padding: 15px 25px;
+    }
+    
 
 }
 

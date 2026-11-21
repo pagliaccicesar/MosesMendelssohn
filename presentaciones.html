@@ -130,7 +130,7 @@
                 </ul>
             </section>
 
-            <section class="newsletter">
+            <!--<section class="newsletter">
                 <div class="newsletter-card">
                     <div class="card-content">
                         <h3 class="h3 card-title">Dejanos tu email y recibí todas las novedades</h3>
@@ -143,6 +143,58 @@
                     <div id="popupNewsletter" class="popup-newsletter">
                         ¡Gracias! En breve nos contactamos.
                     </div>
+                </div>
+            </section>-->
+            <section class="newsletter">
+                <div class="newsletter-card">
+
+                    <div class="card-content">
+                        <h3 class="h3 card-title">
+                            Dejanos tus datos y recibí todas las novedades
+                        </h3>
+                    </div>
+
+                    <form id="newsletterForm" action="newsletter.php" method="POST" class="card-form">
+
+                        <input
+                            type="text"
+                            name="nombre"
+                            placeholder="Ingresa tu nombre"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <input
+                            type="text"
+                            name="apellido"
+                            placeholder="Ingresa tu apellido"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Ingresa tu email"
+                            required
+                            class="input-field"
+                            data-input
+                        >
+
+                        <button type="submit" class="btn btn-primary">
+                            Suscribite
+                        </button>
+                        <div id="recaptchaBadgeContainer"></div>    
+                        
+                        
+                    </form>
+
+                    <div id="popupNewsletter" class="popup-newsletter">
+                        ¡Gracias por suscribirte! En breve recibirás nuestras novedades.
+                    </div>
+
                 </div>
             </section>
         </article>
@@ -195,6 +247,8 @@
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld8ORcuAAAAAPB3xmLJq6Iip_EzW8ntVLE01ePD"></script>
     <script src="./main.js"></script>
 </body>
 </html>
