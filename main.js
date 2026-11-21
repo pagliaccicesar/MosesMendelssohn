@@ -58,12 +58,6 @@ if (headerElem) {
    Newsletter + Google reCAPTCHA v3
 ================================= */
 
-
-
-/* ===============================
-   Newsletter + Google reCAPTCHA v3
-================================= */
-
 const newsletterForm = document.getElementById("newsletterForm");
 
 if (newsletterForm) {
