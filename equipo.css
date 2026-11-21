@@ -898,6 +898,18 @@ header {
 .popup-newsletter.show {
     opacity: 1;
 }
+/* ===============================
+   Google reCAPTCHA v3 - Newsletter
+================================= */
+
+.grecaptcha-badge {
+    position: relative !important;
+    bottom: 20px !important;
+    right: auto !important;
+    margin: 15px auto 0 !important;
+    z-index: 10 !important;
+}
+
 
 /*FOOTER*/
 
@@ -1159,6 +1171,17 @@ header {
         align-self: flex-start;
         margin: 0;
         padding: 15px 25px;
+    }
+    /* ===============================
+   Google reCAPTCHA v3 - Newsletter
+    ================================= */
+
+    .grecaptcha-badge {
+        position: relative !important;
+        bottom: 20px !important;
+        right: auto !important;
+        margin: 15px auto 0 !important;
+        z-index: 10 !important;
     }
     
 
