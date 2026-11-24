@@ -416,7 +416,8 @@ header {
     header.active { top: 0; }
     header .container { display: flex; align-items: center; justify-content: space-between; }
     .nav-toggle-btn { color: var(--white); font-size: 35px; border-radius: 4px; }
-        .nav-toggle-btn ion-icon { --ionicon-stroke-width: 40px; }
+
+    .nav-toggle-btn ion-icon { --ionicon-stroke-width: 40px; }
     .navbar {
         position: fixed;
         bottom: -270px;

@@ -1,4 +1,11 @@
-// Tarjetas del equipo
+
+
+
+
+
+// =====================================
+// TARJETAS DEL EQUIPO
+// =====================================
 
 const cardControllers = document.querySelectorAll("[data-card-controller]");
 
@@ -16,120 +23,91 @@ cardControllers.forEach(controller => {
 });
 
 
-// Popup Donaciones
+// =====================================
+// POPUPS DE DONACIONES
+// =====================================
 
+// Donaciones desde Argentina
 const abrirPopup = document.getElementById("abrirPopup");
-const popup = document.getElementById("popupArgentina");
+const popupArgentina = document.getElementById("popupArgentina");
 const cerrarPopup = document.getElementById("cerrarPopup");
 
-if (abrirPopup && popup && cerrarPopup) {
+// Donaciones desde el extranjero - PayPal
+const abrirPopupPay = document.getElementById("abrirPopup-pay");
+const popupPayPal = document.getElementById("popupArgentina-pay");
+const cerrarPopupPay = document.getElementById("cerrarPopup-pay");
+
+
+// Abrir popup Argentina
+if (abrirPopup && popupArgentina) {
 
     abrirPopup.addEventListener("click", () => {
-        popup.classList.add("active");
+        popupArgentina.classList.add("active");
     });
+
+}
+
+
+// Cerrar popup Argentina
+if (cerrarPopup && popupArgentina) {
 
     cerrarPopup.addEventListener("click", () => {
-        popup.classList.remove("active");
-    });
-
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) {
-            popup.classList.remove("active");
-        }
-    });
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            popup.classList.remove("active");
-        }
+        popupArgentina.classList.remove("active");
     });
 
 }
 
 
-// de paypal
-function crearBoton(planId, contenedor){
+// Abrir popup PayPal
+if (abrirPopupPay && popupPayPal) {
 
-    if(!document.querySelector(contenedor)) return;
-
-    paypal.Buttons({
-
-        style:{
-            shape:"rect",
-            color:"gold",
-            layout:"vertical",
-            label:"subscribe"
-        },
-
-        createSubscription(data, actions){
-
-            return actions.subscription.create({
-                plan_id: planId
-            });
-
-        },
-
-        onApprove(data){
-
-            alert("¡Muchas gracias por colaborar con la Asociación!");
-
-            console.log("ID:", data.subscriptionID);
-
-        },
-
-        onError(err){
-
-            console.error(err);
-
-            alert("No fue posible iniciar la suscripción.");
-
-        }
-
-    }).render(contenedor);
+    abrirPopupPay.addEventListener("click", () => {
+        popupPayPal.classList.add("active");
+    });
 
 }
 
-crearBoton(
-    "P-9JD8514570182411TNIYX6TA",
-    "#paypal-5"
-);
 
-crearBoton(
-    "P-7FA657752S951364RNIYX7SA",
-    "#paypal-10"
-);
+// Cerrar popup PayPal
+if (cerrarPopupPay && popupPayPal) {
 
-crearBoton(
-    "P-1KD33679JY168532FNIY3FXY",
-    "#paypal-15"
-);
-
-
-// Form validation
-
-document
-.getElementById("newsletterForm")
-.addEventListener("submit", function(e){
-    e.preventDefault();
-    const email = this.email.value;
-
-    fetch("newsletter.php",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/x-www-form-urlencoded"
-        },
-        body:"email="+encodeURIComponent(email)
-    })
-    .then(r=>r.text())
-    .then(res=>{
-        alert("¡Gracias! En breve nos contactamos.");
-        document
-        .getElementById("newsletterForm")
-        .reset();
-    })
-
-    .catch(err=>{
-        alert("Error al enviar.");
+    cerrarPopupPay.addEventListener("click", () => {
+        popupPayPal.classList.remove("active");
     });
+
+}
+
+
+// Cerrar al hacer clic fuera de los cuadros
+[popupArgentina, popupPayPal].forEach(popup => {
+
+    if (popup) {
+
+        popup.addEventListener("click", (e) => {
+
+            if (e.target === popup) {
+                popup.classList.remove("active");
+            }
+
+        });
+
+    }
+
 });
+
+
+// Cerrar ambos popups con ESC
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+
+        popupArgentina?.classList.remove("active");
+        popupPayPal?.classList.remove("active");
+
+    }
+
+});
+
+
+
 
