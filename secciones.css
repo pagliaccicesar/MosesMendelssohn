@@ -89,6 +89,7 @@ header {
     transition: var(--transition);
 }
 
+
     header.active { top: 0; }
     header .container { display: flex; align-items: center; justify-content: space-between; }
     .nav-toggle-btn { color: var(--white); font-size: 35px; border-radius: 4px; }
@@ -610,6 +611,10 @@ header {
 
     header { top: -120px; }
     .nav-toggle-btn { display: none; }
+
+   
+
+    
     .navbar {
         position: static;
         visibility: visible;
@@ -619,7 +624,7 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 30px;
+        gap: 30px;        
     }
     .navbar::before, .overlay { display: none; }
 
@@ -650,9 +655,11 @@ header {
 
     .navbar-link:is(:hover, :focus) { background: var(--gradient); -webkit-text-fill-color: transparent; -webkit-background-clip: text; background-clip: text; }
     .navbar-link:is(:hover, :focus)::after { --scale: 1; }
+    
+
     .navbar-actions { gap: 10px; }
     .navbar-actions .btn { background: var(--blue-ryb); padding: 15px 25px; transition: background var(--transition); }
-    .navbar-actions .btn:is(:hover, :focus) { background: hsl(221, 100%, 40%); }
+    .navbar-actions .btn:is(:hover, :focus) { background: hsl(221, 100%, 40%); }*/
    
     .hero-content { width: 160%; }
 
@@ -846,45 +853,3 @@ header {
         z-index: 10 !important;
     }
 }
-
-
-
-
-
-/* =================================
-   NEWSLETTER - CAMPOS DEL FORMULARIO
-================================= */
-
-/*.newsletter .card-form .input-field {
-    width: 100%;
-    height: 55px;
-    padding: 0 15px;
-    margin-bottom: 12px;
-
-    background: rgba(255, 255, 255, 0.28);
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: 5px;
-
-    color: #fff;
-    font-family: 'Arimo', sans-serif;
-    font-size: 15px;
-
-    box-sizing: border-box;
-    outline: none;
-}
-.newsletter .card-form .input-field::placeholder {
-    color: #fff;
-    opacity: 1;
-}
-
-.newsletter .card-form .input-field:focus {
-    background: rgba(255, 255, 255, 0.38);
-    border-color: #fff;
-}
-.newsletter .card-form button {
-    margin-top: 0;
-}
-
-#recaptchaBadgeContainer {
-    margin-top: 12px;
-}*/
